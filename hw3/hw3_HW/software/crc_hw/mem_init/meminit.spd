@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simPackage>
+<file path="hdl_sim/new_sdram_controller_0.dat" type="DAT" initParamName="INIT_FILE" memoryPath="new_sdram_controller_0" />
+</simPackage>

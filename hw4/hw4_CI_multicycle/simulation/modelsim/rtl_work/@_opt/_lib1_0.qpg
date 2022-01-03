@@ -1,0 +1,710 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/simulation/modelsim
+T_opt
+!s110 1634009974
+V4=?cXgcA;FY=k777QTA]33
+04 17 7 work crc_CI_multicycle fast__1 0
+04 20 4 work crc_CI_multicycle_tb fast 0
+=1-80000208fe80-61650375-c75dc-810c
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.6b;65
+valtera_avalon_sc_fifo
+Z2 !s110 1634009766
+!i10b 1
+!s100 4mK@em][G=j]om3zJIhOc0
+I>V`5L_4JWofOc`IP895F92
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1634007362
+8/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/altera_avalon_sc_fifo.v
+F/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/altera_avalon_sc_fifo.v
+Z5 L0 21
+Z6 OL;L;10.6b;65
+r1
+!s85 0
+31
+Z7 !s108 1634009766.000000
+!s107 /home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/altera_avalon_sc_fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/altera_avalon_sc_fifo.v|
+!i113 0
+Z8 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 !s92 -vlog01compat -work work +incdir+/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+valtera_customins_master_translator
+R2
+!i10b 1
+!s100 iAjRYXBhGZ_FfnYD?k0U83
+IY=P_lo3eCOl=l@U4hPVQC1
+R3
+R0
+Z10 w1634007360
+8/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/altera_customins_master_translator.v
+F/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/altera_customins_master_translator.v
+L0 23
+R6
+r1
+!s85 0
+31
+Z11 !s108 1634009765.000000
+!s107 /home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/altera_customins_master_translator.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/altera_customins_master_translator.v|
+!i113 0
+R8
+R9
+R1
+valtera_reset_controller
+Z12 !s110 1634009765
+!i10b 1
+!s100 z[H_hRO9gO=:^2E3_jWH03
+I`Bf9L6Oc3@XjIEH6DISEF1
+R3
+R0
+R4
+8/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/altera_reset_controller.v
+F/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/altera_reset_controller.v
+L0 42
+R6
+r1
+!s85 0
+31
+R11
+!s107 /home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/altera_reset_controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/altera_reset_controller.v|
+!i113 0
+R8
+R9
+R1
+valtera_reset_synchronizer
+R12
+!i10b 1
+!s100 oWLYmSO[EOX[G0PgQhZ2=0
+IOK>:kao6Pk7RcH^>B<_EC1
+R3
+R0
+R4
+8/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/altera_reset_synchronizer.v
+F/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/altera_reset_synchronizer.v
+L0 24
+R6
+r1
+!s85 0
+31
+R11
+!s107 /home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/altera_reset_synchronizer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/altera_reset_synchronizer.v|
+!i113 0
+R8
+R9
+R1
+vcrc_CI_multicycle
+!s110 1634009954
+!i10b 1
+!s100 ;VIM9<Ij8cinX39oh`JM[1
+I^Ub2ETFRDSHDd5G6Vce9O3
+R3
+R0
+w1634008699
+8/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/crc_CI_multicycle.v
+F/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/crc_CI_multicycle.v
+L0 1
+R6
+r1
+!s85 0
+31
+!s108 1634009954.000000
+!s107 /home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/crc_CI_multicycle.v|
+!s90 -reportprogress|300|-work|work|/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/crc_CI_multicycle.v|
+!i113 0
+Z13 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+ncrc_@c@i_multicycle
+vcrc_CI_multicycle_tb
+!s110 1634009953
+!i10b 1
+!s100 7GD1aCo_dnWoGo@Z@>izU0
+ID^mT8SLn=iz81;S3kU6f<3
+R3
+R0
+w1634009943
+8/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/crc_CI_multicycle_tb.v
+F/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/crc_CI_multicycle_tb.v
+L0 2
+R6
+r1
+!s85 0
+31
+!s108 1634009953.000000
+!s107 /home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/crc_CI_multicycle_tb.v|
+!s90 -reportprogress|300|-work|work|/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/crc_CI_multicycle_tb.v|
+!i113 0
+R13
+R1
+ncrc_@c@i_multicycle_tb
+vnios_system
+R2
+!i10b 1
+!s100 2<jP;`A_;@n?H34afZUNl3
+I5E:KN2Cajab@_0[o?jmzj0
+R3
+R0
+Z14 w1634007353
+8/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/nios_system.v
+F/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/nios_system.v
+L0 6
+R6
+r1
+!s85 0
+31
+R7
+!s107 /home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/nios_system.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis|/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/nios_system.v|
+!i113 0
+R8
+!s92 -vlog01compat -work work +incdir+/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vnios_system_jtag_uart_0
+Z15 !s110 1634009764
+!i10b 1
+!s100 Fm>ZJdEGihkV`?f6BLz:H0
+Ih`T;44Zf:OlYMLNboFz=K1
+R3
+R0
+R14
+Z16 8/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_jtag_uart_0.v
+Z17 F/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_jtag_uart_0.v
+L0 331
+R6
+r1
+!s85 0
+31
+Z18 !s108 1634009764.000000
+Z19 !s107 /home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_jtag_uart_0.v|
+Z20 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_jtag_uart_0.v|
+!i113 0
+R8
+R9
+R1
+vnios_system_jtag_uart_0_scfifo_r
+R15
+!i10b 1
+!s100 47KZM;KA2nU8Ze;ai4g7l3
+IKViDE:GYAQ6g]CmF>zQzo2
+R3
+R0
+R14
+R16
+R17
+L0 243
+R6
+r1
+!s85 0
+31
+R18
+R19
+R20
+!i113 0
+R8
+R9
+R1
+vnios_system_jtag_uart_0_scfifo_w
+R15
+!i10b 1
+!s100 5`B6]mFoZZhff:NBY<]Fk2
+IOZLXGej1X`V9d591`[gTI1
+R3
+R0
+R14
+R16
+R17
+L0 78
+R6
+r1
+!s85 0
+31
+R18
+R19
+R20
+!i113 0
+R8
+R9
+R1
+vnios_system_jtag_uart_0_sim_scfifo_r
+R15
+!i10b 1
+!s100 YkRUSd:;8GKW7U=PAIGm80
+I>PJK0BBFQB52<knk>_>]02
+R3
+R0
+R14
+R16
+R17
+L0 164
+R6
+r1
+!s85 0
+31
+R18
+R19
+R20
+!i113 0
+R8
+R9
+R1
+vnios_system_jtag_uart_0_sim_scfifo_w
+R15
+!i10b 1
+!s100 XFzYcMA6@JMe5hE`VK9ci3
+Ifo9]eocDmoHJ`ll:Ze:T<2
+R3
+R0
+R14
+R16
+R17
+R5
+R6
+r1
+!s85 0
+31
+R18
+R19
+R20
+!i113 0
+R8
+R9
+R1
+vnios_system_mm_interconnect_0
+R15
+!i10b 1
+!s100 ]MJ>i;5i]J8T>6HQ>[6K]2
+IQSMG?JnPoFMXeUEcbH0K<0
+R3
+R0
+w1634007361
+8/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_mm_interconnect_0.v
+F/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_mm_interconnect_0.v
+L0 9
+R6
+r1
+!s85 0
+31
+R18
+!s107 /home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_mm_interconnect_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_mm_interconnect_0.v|
+!i113 0
+R8
+R9
+R1
+vnios_system_mm_interconnect_0_avalon_st_adapter
+R15
+!i10b 1
+!s100 FUH8SkjOaZNIW4`TjL<CB2
+IKFjMlSZGck]9K0[8NogRK3
+R3
+R0
+Z21 w1634007363
+8/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter.v
+F/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter.v
+L0 9
+R6
+r1
+!s85 0
+31
+R18
+!s107 /home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter.v|
+!i113 0
+R8
+R9
+R1
+vnios_system_mm_interconnect_0_avalon_st_adapter_001
+R15
+!i10b 1
+!s100 k0eZUeOZcYfK@LEfXBK:_2
+IIlU2bOE`K8IJK@nIbAV:h3
+R3
+R0
+R21
+8/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_001.v
+F/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_001.v
+L0 9
+R6
+r1
+!s85 0
+31
+R18
+!s107 /home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_001.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_001.v|
+!i113 0
+R8
+R9
+R1
+vnios_system_new_sdram_controller_0
+Z22 !s110 1634009763
+!i10b 1
+!s100 2`oJZ]Ih5[SXO]V=iW2>]3
+I`7`:>b?bH0nUzLOR=djMZ0
+R3
+R0
+Z23 w1634007354
+Z24 8/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_new_sdram_controller_0.v
+Z25 F/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_new_sdram_controller_0.v
+L0 159
+R6
+r1
+!s85 0
+31
+Z26 !s108 1634009763.000000
+Z27 !s107 /home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_new_sdram_controller_0.v|
+Z28 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_new_sdram_controller_0.v|
+!i113 0
+R8
+R9
+R1
+vnios_system_new_sdram_controller_0_input_efifo_module
+R22
+!i10b 1
+!s100 D_oTAa2cL:fOgl`56=U110
+I55]kMYBnKY30h7Fe9Q9za3
+R3
+R0
+R23
+R24
+R25
+R5
+R6
+r1
+!s85 0
+31
+R26
+R27
+R28
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0
+R22
+!i10b 1
+!s100 7zF>5;7baZ=?BQPZ88`cJ3
+IQ8Y5K^WOQ15<0Ag@nW?AM0
+R3
+R0
+Z29 w1634007359
+Z30 8/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v
+Z31 F/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v
+L0 3188
+R6
+r1
+!s85 0
+31
+R26
+Z32 !s107 /home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v|
+Z33 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v|
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_jtag_debug_module_sysclk
+R22
+!i10b 1
+!s100 oe=3^kz_KHUjQ`LY^]Tlb2
+I6k>CkBE@Lc]H15;MF]<Zb3
+R3
+R0
+R29
+8/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_sysclk.v
+F/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_sysclk.v
+R5
+R6
+r1
+!s85 0
+31
+R26
+!s107 /home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_sysclk.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_sysclk.v|
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_jtag_debug_module_tck
+Z34 !s110 1634009762
+!i10b 1
+!s100 Wh=D6^a0mf^;?k;G3BXgU3
+IN1g242oHfHf770W==UKc83
+R3
+R0
+R29
+8/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_tck.v
+F/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_tck.v
+R5
+R6
+r1
+!s85 0
+31
+Z35 !s108 1634009762.000000
+!s107 /home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_tck.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_tck.v|
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_jtag_debug_module_wrapper
+R34
+!i10b 1
+!s100 Lkf_:V2<KiGiUZih0Dmg^2
+IWdkSe_`@TJM6AF5]R4Q3I3
+R3
+R0
+R29
+8/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_wrapper.v
+F/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_wrapper.v
+R5
+R6
+r1
+!s85 0
+31
+R35
+!s107 /home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_wrapper.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_wrapper.v|
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_avalon_reg
+R22
+!i10b 1
+!s100 lFk]VKkMD_n7Fb5^cd7Z31
+IO@QKB11QQWj<JW?JL7kzR2
+R3
+R0
+R29
+R30
+R31
+L0 543
+R6
+r1
+!s85 0
+31
+R26
+R32
+R33
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci
+R22
+!i10b 1
+!s100 Y>T90oj8M1B[A:?6z]_MF0
+II`nndIO9fJ2?DJh1C9ZOX2
+R3
+R0
+R29
+R30
+R31
+L0 2679
+R6
+r1
+!s85 0
+31
+R26
+R32
+R33
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_break
+R22
+!i10b 1
+!s100 P^X?[o@V`c>3BLzkCz:]42
+I2j38Sn2L]2fJRI>7h]Xa13
+R3
+R0
+R29
+R30
+R31
+L0 636
+R6
+r1
+!s85 0
+31
+R26
+R32
+R33
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_compute_input_tm_cnt
+R22
+!i10b 1
+!s100 <oI_o3z2?5ZnQ94Wm?9MS0
+I;e]N?7G7d3=0KB>g3h15e3
+R3
+R0
+R29
+R30
+R31
+L0 1812
+R6
+r1
+!s85 0
+31
+R26
+R32
+R33
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_dbrk
+R22
+!i10b 1
+!s100 QSfgF?kPkmCZBWiiOb16[2
+I9jJCEb<Al>KgloIVS1=fS0
+R3
+R0
+R29
+R30
+R31
+L0 1138
+R6
+r1
+!s85 0
+31
+R26
+R32
+R33
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_debug
+R22
+!i10b 1
+!s100 j6jzg;:IEX0H1P@a_onlO1
+IK5lmIPibhAb6@A7c_k?Q11
+R3
+R0
+R29
+R30
+R31
+L0 153
+R6
+r1
+!s85 0
+31
+R26
+R32
+R33
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_dtrace
+R22
+!i10b 1
+!s100 W>OKol3geaoPF1zMafekI2
+IM0?P50U_C[2kDVL48PgKm3
+R3
+R0
+R29
+R30
+R31
+L0 1717
+R6
+r1
+!s85 0
+31
+R26
+R32
+R33
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_fifo
+R22
+!i10b 1
+!s100 D:FDV@3<RXSj<_O[63TUI3
+IcWVZR2jHJhR;5LgGo>BXo1
+R3
+R0
+R29
+R30
+R31
+L0 1974
+R6
+r1
+!s85 0
+31
+R26
+R32
+R33
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_fifo_cnt_inc
+R22
+!i10b 1
+!s100 b?ZJ@SL98^c@2h3e8Q>0Q1
+IF_B>cU4c^f5I2QGL:zF1^0
+R3
+R0
+R29
+R30
+R31
+L0 1927
+R6
+r1
+!s85 0
+31
+R26
+R32
+R33
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_fifo_wrptr_inc
+R22
+!i10b 1
+!s100 Y6C9YJBkolnk7hcX5R0PR2
+Ik3HiCoFU2^R9[6JVS_CVT1
+R3
+R0
+R29
+R30
+R31
+L0 1884
+R6
+r1
+!s85 0
+31
+R26
+R32
+R33
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_im
+R22
+!i10b 1
+!s100 Xlcf]7]3W9d1fzFGKd7eb1
+I;U:EdH@okK4OD4hfMl=ba0
+R3
+R0
+R2

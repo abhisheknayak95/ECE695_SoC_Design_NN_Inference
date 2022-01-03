@@ -1,0 +1,27 @@
+//  Catapult Ultra Synthesis 10.3d/815731 (Production Release) Wed Apr 24 14:54:19 PDT 2019
+//  
+//  Copyright (c) Mentor Graphics Corporation, 1996-2019, All Rights Reserved.
+//                        UNPUBLISHED, LICENSED SOFTWARE.
+//             CONFIDENTIAL AND PROPRIETARY INFORMATION WHICH IS THE
+//                 PROPERTY OF MENTOR GRAPHICS OR ITS LICENSORS
+//  
+//  Running on Linux 695r48@ecegrid-thin4.ecn.purdue.edu 3.10.0-1160.42.2.el7.x86_64 x86_64 aol
+//  
+//  Package information: SIFLIBS v23.3_4.0, HLS_PKGS v23.3_4.0, 
+//                       SIF_TOOLKITS v23.3_4.0, SIF_XILINX v23.3_4.0, 
+//                       SIF_ALTERA v23.3_4.0, CCS_LIBS v23.3_4.0, 
+//                       CDS_PPRO PowerPro-10.2_4, 
+//                       CDS_DesigChecker 10.3b.1902031227, 
+//                       CDS_OASYS v18.1_3.19, DesignPad v2.78_1.0
+//  
+//  Start time Wed Nov 10 16:18:25 2021
+# -------------------------------------------------
+# Logging session transcript to file "/tmp/log23551c29d03f.0"
+project load /home/ecegridfs/a/695r48/ece695r/hw5/graph2/Catapult.ccs
+# Moving session transcript to file "/home/ecegridfs/a/695r48/ece695r/hw5/graph2/catapult.log"
+# Warning: XML Reader failed to push into tag: CLEANLEAF (BASIC-31)
+# Warning: XML Reader failed to push into tag: CLEANLEAF (BASIC-31)
+# Warning: XML Reader failed to push into tag: CLEANLEAF (BASIC-31)
+quit
+# Saving project file '/home/ecegridfs/a/695r48/ece695r/hw5/graph2/Catapult.ccs'. (PRJ-5)
+// Finish time Wed Nov 10 16:19:26 2021, time elapsed 1:01, peak memory 1.31GB, exit status 0

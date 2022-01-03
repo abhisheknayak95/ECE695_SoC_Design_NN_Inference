@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?fileVersion 4.0.0?><cproject storage_type_id="org.eclipse.cdt.core.XmlProjectDescriptionStorage">
+	<storageModule moduleId="org.eclipse.cdt.core.settings">
+		<buildSystem id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1268700031">
+			<storageModule id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1268700031" moduleId="org.eclipse.cdt.core.settings"/>
+		</buildSystem>
+		<cconfiguration id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1268700031">
+			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+				<configuration buildProperties="" description="" id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1268700031" name="Nios II" parent="org.eclipse.cdt.build.core.prefbase.cfg">
+					<folderInfo id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1268700031." name="/" resourcePath="">
+						<toolChain id="altera.nios2.linux.gcc4.635229963" name="Linux Nios II GCC4" superClass="altera.nios2.linux.gcc4">
+							<targetPlatform id="altera.nios2.linux.gcc4.1796607882" name="Nios II" osList="linux" superClass="altera.nios2.linux.gcc4"/>
+							<builder buildPath="${workspace_loc://crc_hw}" id="altera.tool.gnu.builder.1715597509" keepEnvironmentInBuildfile="false" managedBuildOn="false" name="Gnu Make Builder" superClass="altera.tool.gnu.builder"/>
+							<tool id="altera.tool.gnu.c.compiler.2141603661" name="Nios II GCC C Compiler" superClass="altera.tool.gnu.c.compiler">
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1930455370" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="altera.tool.gnu.cpp.compiler.200570420" name="Nios II GCC C++ Compiler" superClass="altera.tool.gnu.cpp.compiler">
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1529343286" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+							</tool>
+							<tool id="altera.tool.gnu.archiver.351873017" name="Nios II GCC Archiver" superClass="altera.tool.gnu.archiver"/>
+							<tool id="altera.tool.gnu.c.linker.27842499" name="Nios II GCC C Linker" superClass="altera.tool.gnu.c.linker"/>
+							<tool id="altera.tool.gnu.cpp.linker.1290551783" name="Nios II GCC C++ Linker" superClass="altera.tool.gnu.cpp.linker">
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.linker.input.306085368" superClass="cdt.managedbuild.tool.gnu.cpp.linker.input">
+									<additionalInput kind="additionalinputdependency" paths="$(USER_OBJS)"/>
+									<additionalInput kind="additionalinput" paths="$(LIBS)"/>
+								</inputType>
+							</tool>
+							<tool id="altera.tool.gnu.assembler.1593883818" name="Nios II GCC Assembler" superClass="altera.tool.gnu.assembler">
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.927514832" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+				</configuration>
+			</storageModule>
+			<storageModule buildSystemId="org.eclipse.cdt.managedbuilder.core.configurationDataProvider" id="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1268700031" moduleId="org.eclipse.cdt.core.settings" name="Nios II">
+				<externalSettings/>
+				<extensions>
+					<extension id="org.eclipse.cdt.core.GNU_ELF" point="org.eclipse.cdt.core.BinaryParser"/>
+					<extension id="org.eclipse.cdt.core.GASErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GmakeErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GLDErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.CWDLocator" point="org.eclipse.cdt.core.ErrorParser"/>
+					<extension id="org.eclipse.cdt.core.GCCErrorParser" point="org.eclipse.cdt.core.ErrorParser"/>
+				</extensions>
+			</storageModule>
+			<storageModule moduleId="org.eclipse.cdt.core.externalSettings"/>
+		</cconfiguration>
+	</storageModule>
+	<storageModule moduleId="cdtBuildSystem" version="4.0.0">
+		<project id="crc_hw.null.1841167753" name="crc_hw"/>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="scannerConfiguration">
+		<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		<scannerConfigBuildInfo instanceId="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1268700031;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1268700031.;altera.tool.gnu.c.compiler.2141603661;cdt.managedbuild.tool.gnu.c.compiler.input.1930455370">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+		<scannerConfigBuildInfo instanceId="preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1268700031;preference.org.eclipse.cdt.managedbuilder.core.configurationDataProvider.1268700031.;altera.tool.gnu.cpp.compiler.200570420;cdt.managedbuild.tool.gnu.cpp.compiler.input.1529343286">
+			<autodiscovery enabled="true" problemReportingEnabled="true" selectedProfileId=""/>
+		</scannerConfigBuildInfo>
+	</storageModule>
+	<storageModule moduleId="org.eclipse.cdt.make.core.buildtargets">
+		<buildTargets>
+			<target name="mem_init_install" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments/>
+				<buildTarget>mem_init_install</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>false</runAllBuilders>
+			</target>
+			<target name="mem_init_generate" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments/>
+				<buildTarget>mem_init_generate</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>false</runAllBuilders>
+			</target>
+			<target name="help" path="" targetID="org.eclipse.cdt.build.MakeTargetBuilder">
+				<buildCommand>make</buildCommand>
+				<buildArguments/>
+				<buildTarget>help</buildTarget>
+				<stopOnError>true</stopOnError>
+				<useDefaultCommand>false</useDefaultCommand>
+				<runAllBuilders>false</runAllBuilders>
+			</target>
+		</buildTargets>
+	</storageModule>
+</cproject>

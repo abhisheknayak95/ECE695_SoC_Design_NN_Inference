@@ -1,0 +1,836 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/simulation/modelsim
+T_opt
+!s110 1632939756
+V`DR=1JTZ2GYF_a_<e69nc0
+04 18 4 work crc_accelerator_tb fast 0
+=1-c81f66bd10e9-6154aeec-4a217-641d
+o-quiet -auto_acc_if_foreign -work work
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.6b;65
+valtera_avalon_sc_fifo
+Z2 !s110 1632939700
+!i10b 1
+!s100 4mK@em][G=j]om3zJIhOc0
+I=on>h8k>EIjOf36LY3E793
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z4 w1632939472
+8/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/altera_avalon_sc_fifo.v
+F/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/altera_avalon_sc_fifo.v
+Z5 L0 21
+Z6 OL;L;10.6b;65
+r1
+!s85 0
+31
+Z7 !s108 1632939699.000000
+!s107 /home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/altera_avalon_sc_fifo.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/altera_avalon_sc_fifo.v|
+!i113 0
+Z8 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 !s92 -vlog01compat -work work +incdir+/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+valtera_reset_controller
+Z10 !s110 1632939699
+!i10b 1
+!s100 z[H_hRO9gO=:^2E3_jWH03
+IUEITE_n^<gIG3O3aTnW_A0
+R3
+R0
+R4
+8/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/altera_reset_controller.v
+F/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/altera_reset_controller.v
+L0 42
+R6
+r1
+!s85 0
+31
+R7
+!s107 /home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/altera_reset_controller.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/altera_reset_controller.v|
+!i113 0
+R8
+R9
+R1
+valtera_reset_synchronizer
+R10
+!i10b 1
+!s100 oWLYmSO[EOX[G0PgQhZ2=0
+I7TXX8bdQBhJe?gohRD^;31
+R3
+R0
+R4
+8/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/altera_reset_synchronizer.v
+F/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/altera_reset_synchronizer.v
+L0 24
+R6
+r1
+!s85 0
+31
+R7
+!s107 /home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/altera_reset_synchronizer.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/altera_reset_synchronizer.v|
+!i113 0
+R8
+R9
+R1
+vcrc_accelerator
+Z11 !s110 1632939724
+!i10b 1
+!s100 lobfTk2eeRf7DClBcckbW2
+IZFF_5nCH:;fGFzOVheiE03
+R3
+R0
+w1632939384
+8/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/crc_accelerator.v
+F/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/crc_accelerator.v
+L0 33
+R6
+r1
+!s85 0
+31
+Z12 !s108 1632939724.000000
+!s107 /home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/crc_accelerator.v|
+!s90 -reportprogress|300|-work|work|/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/crc_accelerator.v|
+!i113 0
+Z13 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vcrc_accelerator_tb
+R11
+!i10b 1
+!s100 UcNRHMKDmBKHYn0jfm`z82
+IdGeBmc_KVRXg_2RoNb4Vi3
+R3
+R0
+w1632936751
+8/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/crc_accelerator_tb.v
+F/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/crc_accelerator_tb.v
+L0 2
+R6
+r1
+!s85 0
+31
+R12
+!s107 /home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/crc_accelerator_tb.v|
+!s90 -reportprogress|300|-work|work|/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/crc_accelerator_tb.v|
+!i113 0
+R13
+R1
+vnios_system
+R2
+!i10b 1
+!s100 Nojec<[9[<9n9T=L<mc@51
+IPVm43bkXZ_<Uo77L5lAV=2
+R3
+R0
+w1632939463
+8/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/nios_system.v
+F/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/nios_system.v
+L0 6
+R6
+r1
+!s85 0
+31
+!s108 1632939700.000000
+!s107 /home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/nios_system.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis|/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/nios_system.v|
+!i113 0
+R8
+!s92 -vlog01compat -work work +incdir+/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vnios_system_jtag_uart_0
+R10
+!i10b 1
+!s100 Fm>ZJdEGihkV`?f6BLz:H0
+I<28QL_zS0o=M@[0[LoQNO3
+R3
+R0
+Z14 w1632939464
+Z15 8/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_jtag_uart_0.v
+Z16 F/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_jtag_uart_0.v
+L0 331
+R6
+r1
+!s85 0
+31
+R7
+Z17 !s107 /home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_jtag_uart_0.v|
+Z18 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_jtag_uart_0.v|
+!i113 0
+R8
+R9
+R1
+vnios_system_jtag_uart_0_scfifo_r
+R10
+!i10b 1
+!s100 47KZM;KA2nU8Ze;ai4g7l3
+I@<_`]9UcjKi^]dUmUI9Me1
+R3
+R0
+R14
+R15
+R16
+L0 243
+R6
+r1
+!s85 0
+31
+R7
+R17
+R18
+!i113 0
+R8
+R9
+R1
+vnios_system_jtag_uart_0_scfifo_w
+R10
+!i10b 1
+!s100 5`B6]mFoZZhff:NBY<]Fk2
+Ik8=zPK2j4DM:RhPIoEPID3
+R3
+R0
+R14
+R15
+R16
+L0 78
+R6
+r1
+!s85 0
+31
+R7
+R17
+R18
+!i113 0
+R8
+R9
+R1
+vnios_system_jtag_uart_0_sim_scfifo_r
+R10
+!i10b 1
+!s100 YkRUSd:;8GKW7U=PAIGm80
+I995^^o2]YVoVYh=[1hRDA2
+R3
+R0
+R14
+R15
+R16
+L0 164
+R6
+r1
+!s85 0
+31
+R7
+R17
+R18
+!i113 0
+R8
+R9
+R1
+vnios_system_jtag_uart_0_sim_scfifo_w
+R10
+!i10b 1
+!s100 XFzYcMA6@JMe5hE`VK9ci3
+Ioi[>_i@^cG:eheo^H5fdh0
+R3
+R0
+R14
+R15
+R16
+R5
+R6
+r1
+!s85 0
+31
+R7
+R17
+R18
+!i113 0
+R8
+R9
+R1
+vnios_system_mm_interconnect_0
+R10
+!i10b 1
+!s100 @?mLNc4azDV`o6hNE2z:L1
+IHFiaba39]C6CZG6FO2X]@1
+R3
+R0
+R4
+8/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_mm_interconnect_0.v
+F/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_mm_interconnect_0.v
+L0 9
+R6
+r1
+!s85 0
+31
+R7
+!s107 /home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_mm_interconnect_0.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_mm_interconnect_0.v|
+!i113 0
+R8
+R9
+R1
+vnios_system_mm_interconnect_0_avalon_st_adapter
+Z19 !s110 1632939698
+!i10b 1
+!s100 FUH8SkjOaZNIW4`TjL<CB2
+IhIKJ]9g3UgZ_ZC7P7NFVJ3
+R3
+R0
+Z20 w1632939473
+8/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter.v
+F/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter.v
+L0 9
+R6
+r1
+!s85 0
+31
+Z21 !s108 1632939698.000000
+!s107 /home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter.v|
+!i113 0
+R8
+R9
+R1
+vnios_system_mm_interconnect_0_avalon_st_adapter_002
+R19
+!i10b 1
+!s100 zF<dl@YbK^13<Fg0T]@kY0
+IZo=ckB@_1?1^B]V2HlUB:1
+R3
+R0
+R20
+8/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_002.v
+F/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_002.v
+L0 9
+R6
+r1
+!s85 0
+31
+R21
+!s107 /home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_002.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_002.v|
+!i113 0
+R8
+R9
+R1
+vnios_system_new_sdram_controller_0
+R19
+!i10b 1
+!s100 2`oJZ]Ih5[SXO]V=iW2>]3
+IAgGA6X[D@Cgnd8@bhWK@H3
+R3
+R0
+R14
+Z22 8/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_new_sdram_controller_0.v
+Z23 F/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_new_sdram_controller_0.v
+L0 159
+R6
+r1
+!s85 0
+31
+R21
+Z24 !s107 /home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_new_sdram_controller_0.v|
+Z25 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_new_sdram_controller_0.v|
+!i113 0
+R8
+R9
+R1
+vnios_system_new_sdram_controller_0_input_efifo_module
+R19
+!i10b 1
+!s100 D_oTAa2cL:fOgl`56=U110
+I0<>aRR6LEhlT4YRo?n;j70
+R3
+R0
+R14
+R22
+R23
+R5
+R6
+r1
+!s85 0
+31
+R21
+R24
+R25
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0
+R19
+!i10b 1
+!s100 _zbAGj5ZVD2dE>Tb4eGDF2
+IUM:;VEgRj4L7Oo@hbaNU20
+R3
+R0
+Z26 w1632939470
+Z27 8/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v
+Z28 F/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v
+L0 3188
+R6
+r1
+!s85 0
+31
+Z29 !s108 1632939697.000000
+Z30 !s107 /home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v|
+Z31 !s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v|
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_jtag_debug_module_sysclk
+Z32 !s110 1632939697
+!i10b 1
+!s100 oe=3^kz_KHUjQ`LY^]Tlb2
+IZEXBHfM>JNbLJ96V_H8X[0
+R3
+R0
+R26
+8/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_sysclk.v
+F/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_sysclk.v
+R5
+R6
+r1
+!s85 0
+31
+R29
+!s107 /home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_sysclk.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_sysclk.v|
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_jtag_debug_module_tck
+R32
+!i10b 1
+!s100 Wh=D6^a0mf^;?k;G3BXgU3
+IBDc>zfE4B]zSA7B0]@D;U1
+R3
+R0
+R26
+8/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_tck.v
+F/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_tck.v
+R5
+R6
+r1
+!s85 0
+31
+R29
+!s107 /home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_tck.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_tck.v|
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_jtag_debug_module_wrapper
+R32
+!i10b 1
+!s100 Lkf_:V2<KiGiUZih0Dmg^2
+IZ=4E`m>HO5FP>BZ7b4HbZ3
+R3
+R0
+R26
+8/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_wrapper.v
+F/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_wrapper.v
+R5
+R6
+r1
+!s85 0
+31
+R29
+!s107 /home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_wrapper.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules|/home/ecegridfs/a/695r48/ece695r/hw3/hw3_tutorials3/nios_system/synthesis/submodules/nios_system_nios2_qsys_0_jtag_debug_module_wrapper.v|
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_avalon_reg
+R19
+!i10b 1
+!s100 lFk]VKkMD_n7Fb5^cd7Z31
+I@6Injz<SR_G:jB1gPGoo40
+R3
+R0
+R26
+R27
+R28
+L0 543
+R6
+r1
+!s85 0
+31
+R29
+R30
+R31
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci
+R19
+!i10b 1
+!s100 Y>T90oj8M1B[A:?6z]_MF0
+IPUXhl9f?WV02F?lOPCh2I0
+R3
+R0
+R26
+R27
+R28
+L0 2679
+R6
+r1
+!s85 0
+31
+R29
+R30
+R31
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_break
+R19
+!i10b 1
+!s100 P^X?[o@V`c>3BLzkCz:]42
+Ii4iTWkGk@cf3:i5_T56Wk2
+R3
+R0
+R26
+R27
+R28
+L0 636
+R6
+r1
+!s85 0
+31
+R29
+R30
+R31
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_compute_input_tm_cnt
+R19
+!i10b 1
+!s100 <oI_o3z2?5ZnQ94Wm?9MS0
+IVU:[3lY:FkSaA9U`2zlkI0
+R3
+R0
+R26
+R27
+R28
+L0 1812
+R6
+r1
+!s85 0
+31
+R29
+R30
+R31
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_dbrk
+R19
+!i10b 1
+!s100 QSfgF?kPkmCZBWiiOb16[2
+I=6Sk[=>f@Lg:U5VB=<RNQ1
+R3
+R0
+R26
+R27
+R28
+L0 1138
+R6
+r1
+!s85 0
+31
+R29
+R30
+R31
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_debug
+R19
+!i10b 1
+!s100 j6jzg;:IEX0H1P@a_onlO1
+IEnJ1ACfJQkL26hP[Ed_1e0
+R3
+R0
+R26
+R27
+R28
+L0 153
+R6
+r1
+!s85 0
+31
+R29
+R30
+R31
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_dtrace
+R19
+!i10b 1
+!s100 W>OKol3geaoPF1zMafekI2
+IGO_f_QE@@5U?kEX>71LWl0
+R3
+R0
+R26
+R27
+R28
+L0 1717
+R6
+r1
+!s85 0
+31
+R29
+R30
+R31
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_fifo
+R19
+!i10b 1
+!s100 D:FDV@3<RXSj<_O[63TUI3
+I2R:DWEPIUO6NfcnK7f4?J2
+R3
+R0
+R26
+R27
+R28
+L0 1974
+R6
+r1
+!s85 0
+31
+R29
+R30
+R31
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_fifo_cnt_inc
+R19
+!i10b 1
+!s100 b?ZJ@SL98^c@2h3e8Q>0Q1
+IP8eU1AH2=aG1REGJ]DRbM2
+R3
+R0
+R26
+R27
+R28
+L0 1927
+R6
+r1
+!s85 0
+31
+R29
+R30
+R31
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_fifo_wrptr_inc
+R19
+!i10b 1
+!s100 Y6C9YJBkolnk7hcX5R0PR2
+IdA5AGLYmQfK[9gzmHWfOd1
+R3
+R0
+R26
+R27
+R28
+L0 1884
+R6
+r1
+!s85 0
+31
+R29
+R30
+R31
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_im
+R19
+!i10b 1
+!s100 Xlcf]7]3W9d1fzFGKd7eb1
+IzfMBPzZ]?QTX7AYUA@?_H2
+R3
+R0
+R26
+R27
+R28
+L0 2545
+R6
+r1
+!s85 0
+31
+R29
+R30
+R31
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_itrace
+R19
+!i10b 1
+!s100 B>8fHSg<Qj>o0XUa[zA8f0
+ISYDddVMBNGGbnI]0mTczY3
+R3
+R0
+R26
+R27
+R28
+L0 1325
+R6
+r1
+!s85 0
+31
+R29
+R30
+R31
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_pib
+R19
+!i10b 1
+!s100 `<WiBTb]go0>o1Va]C]=d2
+Ig6^zm?gD`]C`b[4<0>fE10
+R3
+R0
+R26
+R27
+R28
+L0 2476
+R6
+r1
+!s85 0
+31
+R29
+R30
+R31
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_td_mode
+R19
+!i10b 1
+!s100 USceUUDIcjQ;O3hLLc0ii3
+Im=j]Ra3ZD9j>i795fR<`<0
+R3
+R0
+R26
+R27
+R28
+L0 1649
+R6
+r1
+!s85 0
+31
+R29
+R30
+R31
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_oci_xbrk
+R19
+!i10b 1
+!s100 T>TT:4I43ENFLnik^HaAY2
+I[k>Qgg[Lk8FRWSYf@T5og0
+R3
+R0
+R26
+R27
+R28
+L0 931
+R6
+r1
+!s85 0
+31
+R29
+R30
+R31
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_ocimem
+R19
+!i10b 1
+!s100 :;BnS:0eB0UhL4ko5OFIA1
+IASOYM@a>4]2WnP3S`h:kC2
+R3
+R0
+R26
+R27
+R28
+L0 359
+R6
+r1
+!s85 0
+31
+R29
+R30
+R31
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_nios2_performance_monitors
+R19
+!i10b 1
+!s100 n<cc8XLfmVi^z56e2zmP]2
+IUg5PFIUJ=BzzK>S_mgXXI3
+R3
+R0
+R26
+R27
+R28
+L0 2662
+R6
+r1
+!s85 0
+31
+R29
+R30
+R31
+!i113 0
+R8
+R9
+R1
+vnios_system_nios2_qsys_0_oci_test_bench
+Z33 !s110 1632939696
+!i10b 1
+!s100 Iem1O0OlOFSG4cV2J6Mkj1
+IaI=YA?UYo

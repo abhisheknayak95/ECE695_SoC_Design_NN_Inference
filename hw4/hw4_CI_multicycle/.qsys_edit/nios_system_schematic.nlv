@@ -1,0 +1,21 @@
+# # File gsaved with Nlview version 6.3.8  2013-12-19 bk=1.2992 VDI=34 GEI=35
+# 
+preplace inst nios_system.performance_counter_0 -pg 1 -lvl 3 -y 110
+preplace inst nios_system.jtag_uart_0 -pg 1 -lvl 6 -y 370
+preplace inst nios_system -pg 1 -lvl 1 -y 40 -regy -20
+preplace inst nios_system.sram_0 -pg 1 -lvl 6 -y 570
+preplace inst nios_system.nios2_qsys_0 -pg 1 -lvl 2 -y 60
+preplace inst nios_system.new_sdram_controller_0 -pg 1 -lvl 6 -y 470
+preplace inst nios_system.crc_CI_multicycle_0 -pg 1 -lvl 3 -y 30
+preplace inst nios_system.clk_0 -pg 1 -lvl 1 -y 100
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.sram_0_external_interface,(SLAVE)sram_0.external_interface) 1 0 6 NJ 620 NJ 620 NJ 620 NJ 620 NJ 620 NJ
+preplace netloc INTERCONNECT<net_container>nios_system</net_container>(SLAVE)new_sdram_controller_0.reset,(MASTER)nios2_qsys_0.jtag_debug_module_reset,(MASTER)clk_0.clk_reset,(SLAVE)performance_counter_0.reset,(SLAVE)jtag_uart_0.reset,(SLAVE)sram_0.reset,(SLAVE)nios2_qsys_0.reset_n) 1 1 5 390 210 680 440 NJ 440 NJ 440 1570
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)clk_0.clk_in_reset,(SLAVE)nios_system.reset) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)nios_system.clk,(SLAVE)clk_0.clk_in) 1 0 1 NJ
+preplace netloc EXPORT<net_container>nios_system</net_container>(SLAVE)new_sdram_controller_0.wire,(SLAVE)nios_system.new_sdram_controller_0_wire) 1 0 6 NJ 540 NJ 540 NJ 540 NJ 540 NJ 540 NJ
+preplace netloc FAN_OUT<net_container>nios_system</net_container>(SLAVE)nios2_qsys_0.clk,(MASTER)clk_0.clk,(SLAVE)sram_0.clk,(SLAVE)performance_counter_0.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)new_sdram_controller_0.clk) 1 1 5 390 50 740 220 NJ 400 NJ 400 1590
+preplace netloc POINT_TO_POINT<net_container>nios_system</net_container>(SLAVE)crc_CI_multicycle_0.nios_custom_instruction_slave,(MASTER)nios2_qsys_0.custom_instruction_master) 1 2 1 760
+preplace netloc POINT_TO_POINT<net_container>nios_system</net_container>(MASTER)nios2_qsys_0.d_irq,(SLAVE)jtag_uart_0.irq) 1 2 4 NJ 240 NJ 420 NJ 420 NJ
+preplace netloc INTERCONNECT<net_container>nios_system</net_container>(SLAVE)new_sdram_controller_0.s1,(SLAVE)nios2_qsys_0.jtag_debug_module,(MASTER)nios2_qsys_0.data_master,(MASTER)nios2_qsys_0.instruction_master,(SLAVE)sram_0.avalon_sram_slave,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)performance_counter_0.control_slave) 1 1 5 410 190 720 200 NJ 380 NJ 380 1610
+levelinfo -pg 1 0 180 2160
+levelinfo -hier nios_system 190 220 460 810 1270 1550 2000 2150

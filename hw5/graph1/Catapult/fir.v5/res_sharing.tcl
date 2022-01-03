@@ -1,0 +1,10 @@
+directive set /fir/fir:core/fir:core:conc/MAC:acc#4 RESOURCE_NAME MAC-5:acc#1:rg
+directive set /fir/fir:core/fir:core:conc/MAC-5:acc#1 RESOURCE_NAME MAC-5:acc#1:rg
+directive set /fir/fir:core/fir:core:conc/MAC-5:acc#2 RESOURCE_NAME MAC-4:acc#2:rg
+directive set /fir/fir:core/fir:core:conc/MAC-4:acc#2 RESOURCE_NAME MAC-4:acc#2:rg
+directive set /fir/fir:core/fir:core:conc/MAC:mux#1 RESOURCE_NAME MAC:mux#1:rg
+directive set /fir/fir:core/fir:core:conc/MAC:mux#4 RESOURCE_NAME MAC:mux#1:rg
+directive set /fir/fir:core/fir:core:conc/MAC-2:mul RESOURCE_NAME MAC-1:mul:rg
+directive set /fir/fir:core/fir:core:conc/MAC-3:mul RESOURCE_NAME MAC-1:mul:rg
+directive set /fir/fir:core/fir:core:conc/MAC-1:mul RESOURCE_NAME MAC-1:mul:rg
+directive set /fir/fir:core/fir:core:conc/MAC-4:mul RESOURCE_NAME MAC-1:mul:rg

@@ -1,0 +1,30 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/software/crc_custom_instruction_multicycle/obj/default/runtime/sim/mentor
+vnios_system_performance_counter_0
+VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 ODc8_D<8VRfgbJD7A;LEb0
+IEmhE0G2`Y6mN=l?20cV??2
+R0
+w1634246036
+8/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/testbench/nios_system_tb/simulation/submodules/nios_system_performance_counter_0.v
+F/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/testbench/nios_system_tb/simulation/submodules/nios_system_performance_counter_0.v
+L0 21
+OL;L;10.6b;65
+!s108 1634253947.000000
+!s107 /home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/testbench/nios_system_tb/simulation/submodules/nios_system_performance_counter_0.v|
+!s90 -reportprogress|300|/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/testbench/nios_system_tb/simulation/submodules/nios_system_performance_counter_0.v|-work|performance_counter_0|
+!i113 0
+o-work performance_counter_0 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tCvgOpt 0

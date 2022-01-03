@@ -1,0 +1,76 @@
+# //  Questa Sim-64
+# //  Version 10.6b linux_x86_64 May 25 2017
+# //
+# //  Copyright 1991-2017 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading project accelerator_tester
+# Compile of data_buffer.sv was successful.
+# Compile of fp_adder.sv was successful.
+# Compile of fp_multiplier.sv was successful.
+# Compile of nn_acc_single_non_burst.sv was successful.
+# Compile of nn_acc_single_tb.sv was successful.
+# 5 compiles, 0 failed with no errors.
+vsim -i work.nn_acc_single_tb -vopt -voptargs=+acc
+# vsim -i work.nn_acc_single_tb -vopt -voptargs="+acc" 
+# Start time: 18:28:28 on Dec 12,2019
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading sv_std.std
+# Loading work.nn_acc_single_tb(fast)
+# Loading work.nn_acc_single_non_burst(fast)
+# Loading work.data_buffer(fast)
+# Loading work.fp_adder(fast)
+# Loading work.fp_multiplier(fast)
+# Loading work.nn_acc_single_test(fast)
+do wave.do
+# ** Error: (vish-4014) No objects found matching '/nn_acc_single_tb/SINGLE_MAC_NN_ACCELERATOR/result_buffer_empty'.
+# Executing ONERROR command at macro ./wave.do line 26
+# ** Error: (vish-4014) No objects found matching '/nn_acc_single_tb/SINGLE_MAC_NN_ACCELERATOR/result_buffer_full'.
+# Executing ONERROR command at macro ./wave.do line 27
+# ** Error: (vish-4014) No objects found matching '/nn_acc_single_tb/SINGLE_MAC_NN_ACCELERATOR/result_write_data'.
+# Executing ONERROR command at macro ./wave.do line 28
+# ** Error: (vish-4014) No objects found matching '/nn_acc_single_tb/SINGLE_MAC_NN_ACCELERATOR/result_read_data'.
+# Executing ONERROR command at macro ./wave.do line 29
+# ** Error: (vish-4014) No objects found matching '/nn_acc_single_tb/SINGLE_MAC_NN_ACCELERATOR/RESULT_BUFFER/write_ptr'.
+# Executing ONERROR command at macro ./wave.do line 50
+# ** Error: (vish-4014) No objects found matching '/nn_acc_single_tb/SINGLE_MAC_NN_ACCELERATOR/RESULT_BUFFER/nextstate_write_ptr'.
+# Executing ONERROR command at macro ./wave.do line 51
+# ** Error: (vish-4014) No objects found matching '/nn_acc_single_tb/SINGLE_MAC_NN_ACCELERATOR/RESULT_BUFFER/read_ptr'.
+# Executing ONERROR command at macro ./wave.do line 52
+# ** Error: (vish-4014) No objects found matching '/nn_acc_single_tb/SINGLE_MAC_NN_ACCELERATOR/RESULT_BUFFER/nextstate_read_ptr'.
+# Executing ONERROR command at macro ./wave.do line 53
+# ** Error: (vish-4014) No objects found matching '/nn_acc_single_tb/SINGLE_MAC_NN_ACCELERATOR/RESULT_BUFFER/data_buffer_array'.
+# Executing ONERROR command at macro ./wave.do line 54
+add wave -position insertpoint  \
+sim:/nn_acc_single_tb/SINGLE_MAC_NN_ACCELERATOR/result_register \
+sim:/nn_acc_single_tb/SINGLE_MAC_NN_ACCELERATOR/allow_result_read \
+sim:/nn_acc_single_tb/SINGLE_MAC_NN_ACCELERATOR/allow_result_read_reg \
+sim:/nn_acc_single_tb/SINGLE_MAC_NN_ACCELERATOR/allow_result_read_reg_access
+run -all
+# Starting testbench
+# 0x4270000e
+# 0x42800006
+# 0x4287ffff
+# 0x42700006
+# 0x42500011
+# 0x428ffffc
+# 0x4270000a
+# 0x42500014
+# 0x4260000f
+# 0x42800002
+# ** Note: implicit $finish from program    : /home/ecegrid/a/695r15/ece695r/ramachav_project/Simple-Neural-Network-Accelerator/Custom-Hardware-Blocks/nn_acc_single_tb.sv(211)
+#    Time: 18165 ns  Iteration: 1  Instance: /nn_acc_single_tb/SINGLE_MAC_NN_ACCELERATOR_TESTING
+# 1
+# Simulation stop requested.
+quit -sim
+# End time: 19:55:16 on Dec 12,2019, Elapsed time: 1:26:48
+# Errors: 27, Warnings: 0
+quit

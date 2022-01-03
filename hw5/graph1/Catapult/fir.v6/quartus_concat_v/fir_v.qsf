@@ -1,0 +1,2 @@
+set_global_assignment -name SOURCE_TCL_SCRIPT_FILE /home/ecegridfs/a/695r48/ece695r/hw5/graph1/Catapult/fir.v6/quartus_concat_v/concat_rtl.v.aq.tcl
+

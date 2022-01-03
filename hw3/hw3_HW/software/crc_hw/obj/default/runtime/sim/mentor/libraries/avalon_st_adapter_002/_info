@@ -1,0 +1,30 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ecegridfs/a/695r48/ece695r/hw3/hw3_HW/software/crc_hw/obj/default/runtime/sim/mentor
+vnios_system_mm_interconnect_0_avalon_st_adapter_002
+VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 zF<dl@YbK^13<Fg0T]@kY0
+IeOl[YI4Cz?OM9f:ka`beX1
+R0
+w1632958301
+8/home/ecegridfs/a/695r48/ece695r/hw3/hw3_HW/nios_system/testbench/nios_system_tb/simulation/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_002.v
+F/home/ecegridfs/a/695r48/ece695r/hw3/hw3_HW/nios_system/testbench/nios_system_tb/simulation/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_002.v
+L0 9
+OL;L;10.6b;65
+!s108 1632967953.000000
+!s107 /home/ecegridfs/a/695r48/ece695r/hw3/hw3_HW/nios_system/testbench/nios_system_tb/simulation/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_002.v|
+!s90 -reportprogress|300|/home/ecegridfs/a/695r48/ece695r/hw3/hw3_HW/nios_system/testbench/nios_system_tb/simulation/submodules/nios_system_mm_interconnect_0_avalon_st_adapter_002.v|-work|avalon_st_adapter_002|
+!i113 0
+o-work avalon_st_adapter_002 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tCvgOpt 0

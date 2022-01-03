@@ -1,0 +1,50 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_comb/software/crc_custom_instruction_combinational/obj/default/runtime/sim/mentor
+valtera_reset_controller
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 z[H_hRO9gO=:^2E3_jWH03
+I5LhE1RgP;>blhG0S]3QA;0
+R0
+Z2 w1634248476
+8/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_comb/nios_system/testbench/nios_system_tb/simulation/submodules/altera_reset_controller.v
+F/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_comb/nios_system/testbench/nios_system_tb/simulation/submodules/altera_reset_controller.v
+L0 42
+Z3 OL;L;10.6b;65
+Z4 !s108 1634261527.000000
+!s107 /home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_comb/nios_system/testbench/nios_system_tb/simulation/submodules/altera_reset_controller.v|
+!s90 -reportprogress|300|/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_comb/nios_system/testbench/nios_system_tb/simulation/submodules/altera_reset_controller.v|-work|rst_controller|
+!i113 0
+Z5 o-work rst_controller -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z6 tCvgOpt 0
+valtera_reset_synchronizer
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 oWLYmSO[EOX[G0PgQhZ2=0
+InXYfCC7CmPgU=zcglH4L13
+R0
+R2
+8/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_comb/nios_system/testbench/nios_system_tb/simulation/submodules/altera_reset_synchronizer.v
+F/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_comb/nios_system/testbench/nios_system_tb/simulation/submodules/altera_reset_synchronizer.v
+L0 24
+R3
+R4
+!s107 /home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_comb/nios_system/testbench/nios_system_tb/simulation/submodules/altera_reset_synchronizer.v|
+!s90 -reportprogress|300|/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_comb/nios_system/testbench/nios_system_tb/simulation/submodules/altera_reset_synchronizer.v|-work|rst_controller|
+!i113 0
+R5
+R6

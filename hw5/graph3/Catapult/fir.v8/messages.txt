@@ -1,0 +1,418 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+Pragma 'hls_design<top>' detected on routine 'fir' (CIN-6)
+Edison Design Group C++/C Front End - Version 5.0 (CIN-1)
+Source file analysis completed (CIN-68)
+/INPUTFILES/4
+/INPUTFILES/3
+# Info: Branching solution 'solution.v3' at state 'new' (PRJ-2)
+Front End called with arguments: -- /home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir.cpp /home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir_inc.h (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v3' (SOL-8)
+/INPUTFILES/3
+# Info: Branching solution 'solution.v2' at state 'new' (PRJ-2)
+Edison Design Group C++/C Front End - Version 5.0 (CIN-1)
+Front End called with arguments: -- /home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir.cpp /home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir_inc.h (CIN-69)
+# Warning: parsing restarts here after previous syntax error (CRD-12)
+# Error: expected a statement (CRD-127)
+# Info: Completed transformation 'new' on solution 'solution.v2': elapsed time 2.49 seconds, memory usage 1313512kB, peak memory usage 1379048kB (SOL-9)
+# Error: go analyze: Failed analyze
+# Error: Compilation aborted (CIN-5)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+# Warning:           detected during compilation of secondary translation unit "/home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir.cpp" (CRD-12)
+Front End called with arguments: -- /home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir_inc.h /home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Error: expected a statement (CRD-127)
+Edison Design Group C++/C Front End - Version 5.0 (CIN-1)
+# Warning: parsing restarts here after previous syntax error (CRD-12)
+# Error: go analyze: Failed analyze
+# Error:           detected during compilation of secondary translation unit "/home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir.cpp" (CRD-127)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 2.42 seconds, memory usage 1313512kB, peak memory usage 1379048kB (SOL-9)
+# Error: Compilation aborted (CIN-5)
+# Error: expected a statement (CRD-127)
+# Warning:           detected during compilation of secondary translation unit "/home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir.cpp" (CRD-12)
+# Error:           detected during compilation of secondary translation unit "/home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir.cpp" (CRD-20)
+/INPUTFILES/1
+# Warning: parsing restarts here after previous syntax error (CRD-12)
+# Error: identifier "rtpr" is undefined (CRD-20)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 2.52 seconds, memory usage 1313512kB, peak memory usage 1313512kB (SOL-9)
+/INPUTFILES/2
+# Error: Compilation aborted (CIN-5)
+Edison Design Group C++/C Front End - Version 5.0 (CIN-1)
+Front End called with arguments: -- /home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir_inc.h /home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Moving session transcript to file "/home/ecegridfs/a/695r48/ece695r/hw5/graph4/catapult.log"
+# Error: go analyze: Failed analyze
+# Error:           detected during compilation of secondary translation unit "/home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir.cpp" (CRD-127)
+
+# Messages from "go compile"
+
+# Info: Optimizing partition '/fir/core': (Total ops = 92, Real ops = 10, Vars = 6) (SOL-10)
+INOUT port 'in1' is only used as an input. (OPT-10)
+# Info: Splitting object 'acc(34:3)' into 2 segments (OPT-19)
+# Info: Optimizing partition '/fir/core': (Total ops = 46, Real ops = 10, Vars = 22) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 23, Real ops = 5, Vars = 5) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 46, Real ops = 10, Vars = 25) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 25, Real ops = 5, Vars = 8) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 21, Real ops = 5, Vars = 5) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 23, Real ops = 5, Vars = 8) (SOL-10)
+# Info: CDesignChecker Shell script written to '/home/ecegridfs/a/695r48/ece695r/hw5/graph4/Catapult/fir.v1/CDesignChecker/design_checker.sh'
+# Info: Splitting object 'wptr' into 2 segments (OPT-19)
+# Info: Optimizing partition '/fir': (Total ops = 31, Real ops = 5, Vars = 8) (SOL-10)
+# Info: Splitting object 'rptr' into 2 segments (OPT-19)
+# Info: Splitting object 'MAC:i' into 2 segments (OPT-19)
+Design 'fir' was read (SOL-1)
+# Info: Optimizing partition '/fir': (Total ops = 21, Real ops = 5, Vars = 8) (SOL-10)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Splitting object 'pref:coeffs.ptr.idx.pref.pref.pref' into 2 segments (OPT-19)
+Inlining routine 'fir' (CIN-14)
+# Info: Splitting object 'pref:coeffs.ptr.idx.pref.pref' into 2 segments (OPT-19)
+# Info: Optimizing partition '/fir/core': (Total ops = 30, Real ops = 9, Vars = 23) (SOL-10)
+Synthesizing routine 'fir' (CIN-13)
+INOUT port 'coeffs' is only used as an input. (OPT-10)
+# Info: Splitting object 'MAC:acc.tdx' into 2 segments (OPT-19)
+Optimizing block '/fir' ... (CIN-4)
+# Info: Splitting object 'pref#1' into 2 segments (OPT-19)
+# Info: Starting transformation 'compile' on solution 'solution.v3' (SOL-8)
+# Info: Splitting object 'pref' into 2 segments (OPT-19)
+# Info: Completed transformation 'analyze' on solution 'solution.v3': elapsed time 2.63 seconds, memory usage 1510120kB, peak memory usage 1510120kB (SOL-9)
+# Info: Splitting object 'pref:coeffs.ptr.idx.pref' into 2 segments (OPT-19)
+Found top design routine 'fir' specified by directive (CIN-52)
+# Info: Splitting object 'pref:pref.pref#1' into 2 segments (OPT-19)
+# Info: Optimizing partition '/fir/core': (Total ops = 37, Real ops = 8, Vars = 5) (SOL-10)
+Generating synthesis internal form... (CIN-3)
+Loop '/fir/core/MAC' iterated at most 32 times. (LOOP-2)
+# Info: Optimizing partition '/fir/core': (Total ops = 36, Real ops = 10, Vars = 15) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 31, Real ops = 5, Vars = 5) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 37, Real ops = 10, Vars = 15) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 30, Real ops = 5, Vars = 5) (SOL-10)
+# Info: Splitting object 'acc' into 2 segments (OPT-19)
+# Info: Optimizing partition '/fir': (Total ops = 92, Real ops = 10, Vars = 8) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 36, Real ops = 10, Vars = 18) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 92, Real ops = 10, Vars = 5) (SOL-10)
+INOUT port 'out1' is only used as an output. (OPT-11)
+
+# Messages from "go libraries"
+
+Reading component library '$MGC_HOME/pkgs/ccs_altera/Altera_DIST.lib' [Altera_DIST]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_altera/mgc_Altera-Cyclone-V-6_beh.lib' [mgc_Altera-Cyclone-V-6_beh]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_altera/Altera_MLAB.lib' [Altera_MLAB]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/ccs_altera/Altera_M10K.lib' [Altera_M10K]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_ioport.lib' [mgc_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/ccs_ioport.lib' [ccs_ioport]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_mods.lib' [assert_mods]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/cds_assert/assert_ops.lib' [ASSERT_OPS]... (LIB-49)
+# Info: Starting transformation 'libraries' on solution 'fir.v1' (SOL-8)
+# Info: Completed transformation 'compile' on solution 'fir.v1': elapsed time 2.09 seconds, memory usage 1510120kB, peak memory usage 1510120kB (SOL-9)
+Reading component library '$MGC_HOME/pkgs/siflibs/stdops.lib' [STDOPS]... (LIB-49)
+Reading component library '$MGC_HOME/pkgs/siflibs/mgc_busdefs.lib' [mgc_busdefs]... (LIB-49)
+
+# Messages from "go assembly"
+
+# Info: Optimizing partition '/fir/core': (Total ops = 22, Real ops = 6, Vars = 5) (SOL-10)
+/CLOCKS {clk {-CLOCK_PERIOD 10 -CLOCK_EDGE rising -CLOCK_HIGH_TIME 5 -CLOCK_OFFSET 0.000000 -CLOCK_UNCERTAINTY 0.0 -RESET_KIND sync -RESET_SYNC_NAME rst -RESET_SYNC_ACTIVE high -RESET_ASYNC_NAME arst_n -RESET_ASYNC_ACTIVE low -ENABLE_NAME {} -ENABLE_ACTIVE high}}
+# Info: Completed transformation 'libraries' on solution 'fir.v1': elapsed time 0.40 seconds, memory usage 1510120kB, peak memory usage 1510120kB (SOL-9)
+# Info: Optimizing partition '/fir': (Total ops = 22, Real ops = 6, Vars = 10) (SOL-10)
+# Info: Starting transformation 'assembly' on solution 'fir.v1' (SOL-8)
+
+# Messages from "go architect"
+
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Optimizing partition '/fir': (Total ops = 78, Real ops = 20, Vars = 20) (SOL-10)
+/fir/core/MAC/UNROLL 8
+Loop '/fir/core/main' is left rolled. (LOOP-4)
+# Info: Optimizing partition '/fir/core': (Total ops = 77, Real ops = 20, Vars = 13) (SOL-10)
+# Info: Splitting object 'MAC:i(5:0)#1' into 2 segments (OPT-19)
+# Info: Optimizing partition '/fir/core': (Total ops = 28, Real ops = 6, Vars = 5) (SOL-10)
+# Info: Starting transformation 'loops' on solution 'fir.v8' (SOL-8)
+# Info: Optimizing partition '/fir/core': (Total ops = 105, Real ops = 34, Vars = 5) (SOL-10)
+Loop '/fir/core/MAC' is being partially unrolled 8 times. (LOOP-3)
+# Info: Optimizing partition '/fir/core': (Total ops = 78, Real ops = 20, Vars = 12) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 130, Real ops = 34, Vars = 19) (SOL-10)
+# Info: CDesignChecker Shell script written to '/home/ecegridfs/a/695r48/ece695r/hw5/graph4/Catapult/fir.v8/CDesignChecker/design_checker.sh'
+# Info: Optimizing partition '/fir': (Total ops = 77, Real ops = 20, Vars = 20) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 77, Real ops = 20, Vars = 12) (SOL-10)
+# Info: Branching solution 'fir.v8' at state 'assembly' (PRJ-2)
+# Info: Optimizing partition '/fir/core': (Total ops = 80, Real ops = 25, Vars = 18) (SOL-10)
+# Info: Splitting object 'MAC:i(5:0)#1' into 2 segments (OPT-19)
+# Info: Optimizing partition '/fir/core': (Total ops = 78, Real ops = 25, Vars = 18) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 80, Real ops = 25, Vars = 26) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 79, Real ops = 25, Vars = 19) (SOL-10)
+Loop '/fir/core/MAC' is being partially unrolled 7 times. (LOOP-3)
+N_UNROLL parameter 7 not an exact divisor of 32, the total number of loop iterations. (LOOP-8)
+# Info: Optimizing partition '/fir': (Total ops = 78, Real ops = 25, Vars = 26) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 93, Real ops = 30, Vars = 17) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 94, Real ops = 30, Vars = 5) (SOL-10)
+/fir/core/MAC/UNROLL 7
+# Info: Optimizing partition '/fir/core': (Total ops = 28, Real ops = 6, Vars = 5) (SOL-10)
+# Info: Starting transformation 'loops' on solution 'fir.v7' (SOL-8)
+# Info: Branching solution 'fir.v7' at state 'assembly' (PRJ-2)
+# Info: CDesignChecker Shell script written to '/home/ecegridfs/a/695r48/ece695r/hw5/graph4/Catapult/fir.v7/CDesignChecker/design_checker.sh'
+Loop '/fir/core/main' is left rolled. (LOOP-4)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Optimizing partition '/fir/core': (Total ops = 67, Real ops = 19, Vars = 14) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 67, Real ops = 19, Vars = 21) (SOL-10)
+Loop '/fir/core/main' is left rolled. (LOOP-4)
+# Info: Optimizing partition '/fir/core': (Total ops = 68, Real ops = 19, Vars = 13) (SOL-10)
+# Info: Splitting object 'MAC:i(5:0)#1' into 3 segments (OPT-19)
+# Info: Optimizing partition '/fir': (Total ops = 68, Real ops = 19, Vars = 21) (SOL-10)
+# Info: CDesignChecker Shell script written to '/home/ecegridfs/a/695r48/ece695r/hw5/graph4/Catapult/fir.v6/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'fir.v6' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/fir/core/MAC' is being partially unrolled 6 times. (LOOP-3)
+N_UNROLL parameter 6 not an exact divisor of 32, the total number of loop iterations. (LOOP-8)
+# Info: Optimizing partition '/fir/core': (Total ops = 102, Real ops = 26, Vars = 15) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 83, Real ops = 26, Vars = 5) (SOL-10)
+/fir/core/MAC/UNROLL 6
+# Info: Optimizing partition '/fir/core': (Total ops = 28, Real ops = 6, Vars = 5) (SOL-10)
+# Info: Starting transformation 'loops' on solution 'fir.v6' (SOL-8)
+# Info: Optimizing partition '/fir/core': (Total ops = 67, Real ops = 19, Vars = 13) (SOL-10)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/fir/core/main' is left rolled. (LOOP-4)
+/fir/core/MAC/UNROLL 5
+# Info: Optimizing partition '/fir/core': (Total ops = 64, Real ops = 19, Vars = 14) (SOL-10)
+# Info: Splitting object 'MAC:i(5:0)#1' into 2 segments (OPT-19)
+# Info: Optimizing partition '/fir': (Total ops = 64, Real ops = 19, Vars = 22) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 28, Real ops = 6, Vars = 5) (SOL-10)
+# Info: Starting transformation 'loops' on solution 'fir.v5' (SOL-8)
+Loop '/fir/core/MAC' is being partially unrolled 5 times. (LOOP-3)
+N_UNROLL parameter 5 not an exact divisor of 32, the total number of loop iterations. (LOOP-8)
+# Info: Optimizing partition '/fir/core': (Total ops = 72, Real ops = 22, Vars = 13) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 72, Real ops = 22, Vars = 5) (SOL-10)
+# Info: CDesignChecker Shell script written to '/home/ecegridfs/a/695r48/ece695r/hw5/graph4/Catapult/fir.v5/CDesignChecker/design_checker.sh'
+# Info: Optimizing partition '/fir/core': (Total ops = 62, Real ops = 19, Vars = 14) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 63, Real ops = 19, Vars = 15) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 62, Real ops = 19, Vars = 22) (SOL-10)
+# Info: Branching solution 'fir.v5' at state 'assembly' (PRJ-2)
+# Info: Splitting object 'MAC:i(5:0)#1' into 2 segments (OPT-19)
+# Info: Optimizing partition '/fir/core': (Total ops = 28, Real ops = 6, Vars = 5) (SOL-10)
+# Info: Starting transformation 'loops' on solution 'fir.v4' (SOL-8)
+# Info: Optimizing partition '/fir/core': (Total ops = 61, Real ops = 18, Vars = 5) (SOL-10)
+Loop '/fir/core/MAC' is being partially unrolled 4 times. (LOOP-3)
+# Info: Optimizing partition '/fir/core': (Total ops = 50, Real ops = 12, Vars = 8) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 74, Real ops = 18, Vars = 11) (SOL-10)
+# Info: CDesignChecker Shell script written to '/home/ecegridfs/a/695r48/ece695r/hw5/graph4/Catapult/fir.v4/CDesignChecker/design_checker.sh'
+# Info: Optimizing partition '/fir': (Total ops = 49, Real ops = 12, Vars = 16) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 49, Real ops = 12, Vars = 8) (SOL-10)
+# Info: Branching solution 'fir.v4' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Optimizing partition '/fir': (Total ops = 50, Real ops = 12, Vars = 16) (SOL-10)
+/fir/core/MAC/UNROLL 4
+Loop '/fir/core/main' is left rolled. (LOOP-4)
+# Info: Optimizing partition '/fir/core': (Total ops = 49, Real ops = 12, Vars = 9) (SOL-10)
+Loop '/fir/core/main' is left rolled. (LOOP-4)
+# Info: Optimizing partition '/fir/core': (Total ops = 48, Real ops = 13, Vars = 10) (SOL-10)
+# Info: Splitting object 'MAC:i(5:0)#1' into 2 segments (OPT-19)
+# Info: Optimizing partition '/fir': (Total ops = 48, Real ops = 13, Vars = 18) (SOL-10)
+# Info: CDesignChecker Shell script written to '/home/ecegridfs/a/695r48/ece695r/hw5/graph4/Catapult/fir.v3/CDesignChecker/design_checker.sh'
+# Info: Branching solution 'fir.v3' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+Loop '/fir/core/MAC' is being partially unrolled 3 times. (LOOP-3)
+N_UNROLL parameter 3 not an exact divisor of 32, the total number of loop iterations. (LOOP-8)
+# Info: Optimizing partition '/fir/core': (Total ops = 50, Real ops = 14, Vars = 9) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 50, Real ops = 14, Vars = 5) (SOL-10)
+/fir/core/MAC/UNROLL 3
+# Info: Optimizing partition '/fir/core': (Total ops = 28, Real ops = 6, Vars = 5) (SOL-10)
+# Info: Starting transformation 'loops' on solution 'fir.v3' (SOL-8)
+# Info: Optimizing partition '/fir/core': (Total ops = 46, Real ops = 13, Vars = 10) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 47, Real ops = 13, Vars = 11) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 46, Real ops = 13, Vars = 18) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 35, Real ops = 8, Vars = 14) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 35, Real ops = 8, Vars = 6) (SOL-10)
+# Info: Branching solution 'fir.v2' at state 'assembly' (PRJ-2)
+Makefile for Original Design + Testbench written to file './scverify/Verify_orig_cxx_osci.mk'
+# Info: Optimizing partition '/fir': (Total ops = 36, Real ops = 8, Vars = 14) (SOL-10)
+/fir/core/MAC/UNROLL 2
+Loop '/fir/core/main' is left rolled. (LOOP-4)
+# Info: Optimizing partition '/fir/core': (Total ops = 35, Real ops = 8, Vars = 7) (SOL-10)
+# Info: Splitting object 'MAC:i(5:0)#1' into 2 segments (OPT-19)
+# Info: Optimizing partition '/fir/core': (Total ops = 28, Real ops = 6, Vars = 5) (SOL-10)
+# Info: Starting transformation 'loops' on solution 'fir.v2' (SOL-8)
+# Info: Optimizing partition '/fir/core': (Total ops = 39, Real ops = 10, Vars = 5) (SOL-10)
+Loop '/fir/core/MAC' is being partially unrolled 2 times. (LOOP-3)
+# Info: Optimizing partition '/fir/core': (Total ops = 36, Real ops = 8, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 46, Real ops = 10, Vars = 7) (SOL-10)
+# Info: CDesignChecker Shell script written to '/home/ecegridfs/a/695r48/ece695r/hw5/graph4/Catapult/fir.v2/CDesignChecker/design_checker.sh'
+Loop '/fir/core/main' is left rolled. (LOOP-4)
+/fir/coeffs:rsc/MAP_TO_MODULE mgc_ioport.mgc_in_wire
+# Info: Starting transformation 'loops' on solution 'fir.v1' (SOL-8)
+# Info: Completed transformation 'assembly' on solution 'fir.v1': elapsed time 0.09 seconds, memory usage 1510120kB, peak memory usage 1510120kB (SOL-9)
+/fir/core/regs:rsc/MAP_TO_MODULE Altera_M10K.M10K_DP
+/fir/coeffs/WORD_WIDTH 512
+Loop '/fir/core/MAC' is left rolled. (LOOP-4)
+/fir/coeffs:rsc/PACKING_MODE sidebyside
+# Info: Optimizing partition '/fir/core': (Total ops = 28, Real ops = 6, Vars = 5) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 101, Real ops = 22, Vars = 15) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 100, Real ops = 22, Vars = 15) (SOL-10)
+# Info: Splitting object 'regs:asn(regs)#1.rlp' into 2 segments (OPT-19)
+# Info: Starting transformation 'memories' on solution 'fir.v8' (SOL-8)
+# Info: Optimizing partition '/fir': (Total ops = 101, Real ops = 22, Vars = 23) (SOL-10)
+# Info: Completed transformation 'loops' on solution 'fir.v8': elapsed time 0.41 seconds, memory usage 1510108kB, peak memory usage 1510120kB (SOL-9)
+I/O-Port Resource '/fir/out1:rsc' (from var: out1) mapped to 'ccs_ioport.ccs_out' (size: 16). (MEM-2)
+I/O-Port Resource '/fir/in1:rsc' (from var: in1) mapped to 'ccs_ioport.ccs_in' (size: 16). (MEM-2)
+I/O-Port Resource '/fir/coeffs:rsc' (from var: coeffs) mapped to 'mgc_ioport.mgc_in_wire' (size: 512). (MEM-2)
+# Info: Optimizing partition '/fir/core': (Total ops = 100, Real ops = 22, Vars = 14) (SOL-10)
+Memory Resource '/fir/core/regs:rsc' (from var: regs) mapped to 'Altera_M10K.M10K_DP' (size: 32 x 16). (MEM-4)
+# Info: Optimizing partition '/fir': (Total ops = 100, Real ops = 22, Vars = 22) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 97, Real ops = 22, Vars = 17) (SOL-10)
+# Info: Splitting object 'regs:vinit.ndx' into 2 segments (OPT-19)
+# Info: Optimizing partition '/fir': (Total ops = 97, Real ops = 22, Vars = 23) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 97, Real ops = 22, Vars = 15) (SOL-10)
+# Info: Starting transformation 'cluster' on solution 'fir.v8' (SOL-8)
+# Info: Completed transformation 'memories' on solution 'fir.v8': elapsed time 0.48 seconds, memory usage 1510108kB, peak memory usage 1510120kB (SOL-9)
+Design 'fir' contains '55' real operations. (SOL-11)
+# Info: Starting transformation 'architect' on solution 'fir.v8' (SOL-8)
+# Info: Completed transformation 'cluster' on solution 'fir.v8': elapsed time 0.05 seconds, memory usage 1510108kB, peak memory usage 1510120kB (SOL-9)
+# Info: Optimizing partition '/fir/core': (Total ops = 171, Real ops = 40, Vars = 26) (SOL-10)
+# Info: Optimizing partition '/fir/core': (Total ops = 285, Real ops = 49, Vars = 132) (SOL-10)
+
+# Messages from "go allocate"
+
+# Info: Starting transformation 'allocate' on solution 'fir.v8' (SOL-8)
+# Info: Completed transformation 'architect' on solution 'fir.v8': elapsed time 0.23 seconds, memory usage 1510108kB, peak memory usage 1510120kB (SOL-9)
+# Info: Select qualified components for data operations ... (CRAAS-3)
+Performing concurrent resource allocation and scheduling on '/fir/core' (CRAAS-1)
+Netlist written to file 'schedule.gnt' (NET-4)
+Prescheduled SEQUENTIAL '/fir/core' (total length 96 c-steps) (SCHD-8)
+Prescheduled LOOP '/fir/core/core:rlp' (1 c-steps) (SCHD-7)
+At least one feasible schedule exists. (CRAAS-9)
+# Info: Final schedule of SEQUENTIAL '/fir/core': Latency = 42, Area (Datapath, Register, Total) = 654.98, 0.00, 654.98 (CRAAS-12)
+# Info: Initial schedule of SEQUENTIAL '/fir/core': Latency = 30, Area (Datapath, Register, Total) = 964.98, 0.00, 964.98 (CRAAS-11)
+# Info: Optimized LOOP 'MAC': Latency = 42, Area (Datapath, Register, Total) = 654.98, 0.00, 654.98 (CRAAS-10)
+Prescheduled LOOP '/fir/core/MAC' (7 c-steps) (SCHD-7)
+# Info: Apply resource constraints on data operations ... (CRAAS-4)
+Resource allocation and scheduling done. (CRAAS-2)
+Prescheduled LOOP '/fir/core/regs:vinit' (2 c-steps) (SCHD-7)
+Prescheduled LOOP '/fir/core/main' (3 c-steps) (SCHD-7)
+
+# Messages from "go schedule"
+
+Global signal 'regs:rsc.db' added to design 'fir' for component 'regs:rsci' (LIB-3)
+Global signal 'regs:rsc.reb' added to design 'fir' for component 'regs:rsci' (LIB-3)
+Global signal 'regs:rsc.adrb' added to design 'fir' for component 'regs:rsci' (LIB-3)
+Global signal 'regs:rsc.web' added to design 'fir' for component 'regs:rsci' (LIB-3)
+# Info: Splitting object 'MAC:i(5:3).sva' into 2 segments (OPT-19)
+# Info: Optimizing partition '/fir': (Total ops = 503, Real ops = 56, Vars = 114) (SOL-10)
+# Info: Optimizing partition '/fir/fir:core/core': (Total ops = 352, Real ops = 55, Vars = 55) (SOL-10)
+# Info: Optimizing partition '/fir/fir:core/core': (Total ops = 415, Real ops = 55, Vars = 69) (SOL-10)
+Global signal 'coeffs:rsc.triosy.lz' added to design 'fir' for component 'coeffs:rsc.triosy:obj' (LIB-3)
+Global signal 'regs:rsc.adra' added to design 'fir' for component 'regs:rsci' (LIB-3)
+Global signal 'in1:rsc.dat' added to design 'fir' for component 'in1:rsci' (LIB-3)
+Global signal 'out1:rsc.triosy.lz' added to design 'fir' for component 'out1:rsc.triosy:obj' (LIB-3)
+Global signal 'coeffs:rsc.z' added to design 'fir' for component 'coeffs:rsci' (LIB-3)
+Global signal 'in1:rsc.triosy.lz' added to design 'fir' for component 'in1:rsc.triosy:obj' (LIB-3)
+Global signal 'regs:rsc.qb' added to design 'fir' for component 'regs:rsci' (LIB-3)
+Global signal 'out1:rsc.dat' added to design 'fir' for component 'out1:rsci' (LIB-3)
+# Info: Starting transformation 'schedule' on solution 'fir.v8' (SOL-8)
+# Info: Completed transformation 'allocate' on solution 'fir.v8': elapsed time 0.37 seconds, memory usage 1510108kB, peak memory usage 1510120kB (SOL-9)
+Performing concurrent resource allocation and scheduling on '/fir/core' (CRAAS-1)
+# Info: Optimizing partition '/fir': (Total ops = 431, Real ops = 56, Vars = 101) (SOL-10)
+Report written to file 'cycle.rpt'
+Global signal 'regs:rsc.rea' added to design 'fir' for component 'regs:rsci' (LIB-3)
+Global signal 'regs:rsc.qa' added to design 'fir' for component 'regs:rsci' (LIB-3)
+Global signal 'regs:rsc.wea' added to design 'fir' for component 'regs:rsci' (LIB-3)
+Global signal 'regs:rsc.da' added to design 'fir' for component 'regs:rsci' (LIB-3)
+
+# Messages from "go dpfsm"
+
+# Info: Optimizing partition '/fir/fir:core/fir:core_core:fsm/fir:core_core:fsm': (Total ops = 18, Real ops = 1, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 521, Real ops = 155, Vars = 100) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 524, Real ops = 176, Vars = 107) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 509, Real ops = 148, Vars = 97) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 509, Real ops = 151, Vars = 105) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 507, Real ops = 146, Vars = 97) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 511, Real ops = 150, Vars = 98) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 511, Real ops = 150, Vars = 100) (SOL-10)
+Creating shared register 'wptr(4:0)#1.sva' for variables 'wptr(4:0)#1.sva, wptr(4:0)#6.lpi#2.dfm, MAC:MAC:or#7.itm' (2 registers deleted). (FSM-3)
+Creating shared register 'MAC:MAC:nor#12.itm' for variables 'MAC:MAC:nor#12.itm, MAC:MAC:nor#14.itm, MAC:MAC:nor#9.itm, nand.itm' (3 registers deleted). (FSM-3)
+Creating shared register 'regs:acc.itm' for variables 'regs:acc.itm, regs:vinit.ndx(4:0).sva, rptr(4:0).sva' (2 registers deleted). (FSM-3)
+Creating shared register 'wptr(4:0)#1.sva#2' for variables 'wptr(4:0)#1.sva#2, wptr(4:0)#4.sva#1' (1 register deleted). (FSM-2)
+Creating shared register 'MAC-2:mul.itm' for variables 'MAC-2:mul.itm, MAC-4:mul.itm, MAC:acc#4.itm' (2 registers deleted). (FSM-3)
+# Info: Optimizing partition '/fir/fir:core/core': (Total ops = 426, Real ops = 64, Vars = 55) (SOL-10)
+Creating shared register 'MAC-7:mul.itm' for variables 'MAC-7:mul.itm, MAC:acc#3.itm' (1 register deleted). (FSM-2)
+Creating shared register 'MAC-5:mul.itm' for variables 'MAC-5:mul.itm, MAC:acc#9.itm' (1 register deleted). (FSM-2)
+# Info: Starting transformation 'dpfsm' on solution 'fir.v8' (SOL-8)
+# Info: Completed transformation 'schedule' on solution 'fir.v8': elapsed time 2.02 seconds, memory usage 1510108kB, peak memory usage 1510120kB (SOL-9)
+Creating shared register 'wptr(4:0)#1.sva#2' for variables 'wptr(4:0)#1.sva#2, wptr(4:0)#4.sva#1, MAC:i(5:3).sva(1:0)' (1 register deleted). (FSM-2)
+Creating shared register 'MAC:mux#9.itm' for variables 'MAC:mux#9.itm, MAC:slc(regs:rsci.qa_d)(31-16)#2.itm' (1 register deleted). (FSM-2)
+Performing FSM extraction... (FSM-1)
+# Info: Optimizing partition '/fir/fir:core/fir:core_core:fsm': (Total ops = 19, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 930, Real ops = 298, Vars = 664) (SOL-10)
+Creating shared register 'MAC:slc(regs:rsci.qa_d)(15-0)#2.itm' for variables 'MAC:slc(regs:rsci.qa_d)(15-0)#2.itm, MAC:slc(regs:rsci.qa_d)(15-0)#3.itm, MAC:slc(regs:rsci.qa_d)(31-16)#1.itm, MAC:mux#10.itm' (3 registers deleted). (FSM-3)
+Creating shared register 'wptr(4:0)#3.lpi#2.dfm' for variables 'wptr(4:0)#3.lpi#2.dfm, wptr(4:0).lpi#2.dfm' (1 register deleted). (FSM-2)
+Creating shared register 'MAC:mux#13.itm' for variables 'MAC:mux#13.itm, MAC:slc(regs:rsci.qa_d)(15-0).itm' (1 register deleted). (FSM-2)
+Creating shared register 'MAC:slc(regs:rsci.qa_d)(31-16)#3.itm' for variables 'MAC:slc(regs:rsci.qa_d)(31-16)#3.itm, MAC:slc(regs:rsci.qa_d)(31-16).itm' (1 register deleted). (FSM-2)
+# Info: Optimizing partition '/fir': (Total ops = 519, Real ops = 149, Vars = 112) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 513, Real ops = 152, Vars = 102) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 508, Real ops = 146, Vars = 97) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 509, Real ops = 146, Vars = 102) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 583, Real ops = 227, Vars = 144) (SOL-10)
+
+# Messages from "go extract"
+
+Netlist written to file 'schematic.nlv' (NET-4)
+# Info: Optimizing partition '/fir': (Total ops = 480, Real ops = 123, Vars = 101) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 497, Real ops = 124, Vars = 104) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 479, Real ops = 123, Vars = 101) (SOL-10)
+Shared Operations else:acc,MAC:acc on resource MAC:acc:rg:mgc_add(5,0,1,0,5) (ASG-3)
+Reassigned operation MAC:acc:mgc_add(2,0,2,1,3) to mgc_add(5,0,1,0,5) (ASG-1)
+Shared Operations MAC-3:else:acc,MAC-8:else:acc on resource MAC-3:else:acc:rg:mgc_add(5,0,1,1,5) (ASG-3)
+Shared Operations regs:acc,MAC-2:else:acc,MAC-7:else:acc on resource MAC-2:else:acc:rg:mgc_add(5,0,1,1,5) (ASG-3)
+# Info: Starting transformation 'instance' on solution 'fir.v8' (SOL-8)
+# Info: Completed transformation 'dpfsm' on solution 'fir.v8': elapsed time 0.87 seconds, memory usage 1510108kB, peak memory usage 1510120kB (SOL-9)
+Reassigned operation else:acc:mgc_add(5,0,2,1,5) to mgc_add(5,0,1,0,5) (ASG-1)
+# Info: Optimizing partition '/fir': (Total ops = 586, Real ops = 141, Vars = 506) (SOL-10)
+Shared Operations MAC:acc#6,MAC:acc#5,MAC-8:acc#1 on resource MAC-8:acc#1:rg:mgc_add(30,0,30,0,30) (ASG-3)
+# Info: Optimizing partition '/fir/fir:core/fir:core_core:fsm/fir:core_core:fsm': (Total ops = 18, Real ops = 1, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/fir/fir:core/fir:core_core:fsm': (Total ops = 19, Real ops = 2, Vars = 6) (SOL-10)
+Shared Operations MAC-4:mul,MAC-8:mul on resource MAC-4:mul:rg:mgc_mul(16,1,16,1,30) (ASG-3)
+Shared Operations MAC-2:mul,MAC-5:mul on resource MAC-2:mul:rg:mgc_mul(16,1,16,1,30) (ASG-3)
+Shared Operations MAC-7:mul,MAC-3:mul on resource MAC-3:mul:rg:mgc_mul(16,1,16,1,30) (ASG-3)
+Shared Operations MAC-6:mul,MAC-1:mul on resource MAC-1:mul:rg:mgc_mul(16,1,16,1,30) (ASG-3)
+# Info: Optimizing partition '/fir/fir:core/fir:core_core:fsm': (Total ops = 19, Real ops = 2, Vars = 6) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 479, Real ops = 123, Vars = 399) (SOL-10)
+Report written to file 'rtl.rpt'
+Makefile for Concat RTL VHDL output 'concat_sim_rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_vhdl_msim.mk'
+Add dependent file: ./rtl.v
+Add dependent file: /package/eda/mg/Catapult_10.3d/Mgc_home/pkgs/ccs_altera/hdl/M10K_DP.v
+order file name is: rtl.v_order_sim.txt
+Finished writing concatenated file: /home/ecegridfs/a/695r48/ece695r/hw5/graph4/Catapult/fir.v8/concat_rtl.v
+Add dependent file: /package/eda/mg/Catapult_10.3d/Mgc_home/pkgs/siflibs/ccs_in_v1.v
+Add dependent file: /package/eda/mg/Catapult_10.3d/Mgc_home/pkgs/siflibs/mgc_in_wire_v2.v
+# Info: Altera Quartus synthesis script written to '/home/ecegridfs/a/695r48/ece695r/hw5/graph4/Catapult/fir.v8/quartus_concat_vhdl/concat_rtl.vhdl.aq'
+Add dependent file: /package/eda/mg/Catapult_10.3d/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.v
+Add dependent file: /package/eda/mg/Catapult_10.3d/Mgc_home/pkgs/siflibs/ccs_out_v1.v
+Netlist written to file 'rtl.v' (NET-4)
+order file name is: rtl.v_order.txt
+# Info: Altera Quartus synthesis script written to '/home/ecegridfs/a/695r48/ece695r/hw5/graph4/Catapult/fir.v8/quartus_v/rtl.v.aq'
+Finished writing concatenated simulation file: /home/ecegridfs/a/695r48/ece695r/hw5/graph4/Catapult/fir.v8/concat_sim_rtl.v
+Makefile for RTL Verilog output 'rtl.v' vs Untimed C++ written to file './scverify/Verify_rtl_v_msim.mk'
+Finished writing concatenated simulation file: /home/ecegridfs/a/695r48/ece695r/hw5/graph4/Catapult/fir.v8/concat_sim_rtl.vhdl
+order file name is: rtl.vhdl_order_sim.txt
+Generating scverify_top.cpp ()
+Generating SCVerify testbench files
+Add dependent file: /package/eda/mg/Catapult_10.3d/Mgc_home/pkgs/ccs_altera/hdl/M10K_DP.vhd
+Add dependent file: /package/eda/mg/Catapult_10.3d/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd
+Finished writing concatenated file: /home/ecegridfs/a/695r48/ece695r/hw5/graph4/Catapult/fir.v8/concat_rtl.vhdl
+Add dependent file: ./rtl.vhdl
+Add dependent file: /package/eda/mg/Catapult_10.3d/Mgc_home/pkgs/siflibs/mgc_in_wire_v2.vhd
+order file name is: rtl.vhdl_order.txt
+Add dependent file: /package/eda/mg/Catapult_10.3d/Mgc_home/pkgs/siflibs/ccs_out_v1.vhd
+# Info: Altera Quartus synthesis script written to '/home/ecegridfs/a/695r48/ece695r/hw5/graph4/Catapult/fir.v8/quartus_vhdl/rtl.vhdl.aq'
+Add dependent file: /package/eda/mg/Catapult_10.3d/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd
+Netlist written to file 'rtl.vhdl' (NET-4)
+generate concat
+Makefile for RTL VHDL output 'rtl.vhdl' vs Untimed C++ written to file './scverify/Verify_rtl_vhdl_msim.mk'
+Makefile for Concat RTL Verilog output 'concat_sim_rtl.v' vs Untimed C++ written to file './scverify/Verify_concat_sim_rtl_v_msim.mk'
+# Info: Optimizing partition '/fir': (Total ops = 457, Real ops = 130, Vars = 101) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 480, Real ops = 123, Vars = 104) (SOL-10)
+# Info: Optimizing partition '/fir/fir:core/fir:core_core:fsm/fir:core_core:fsm': (Total ops = 18, Real ops = 1, Vars = 1) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 479, Real ops = 123, Vars = 101) (SOL-10)
+# Info: Optimizing partition '/fir': (Total ops = 480, Real ops = 123, Vars = 101) (SOL-10)
+# Info: Starting transformation 'extract' on solution 'fir.v8' (SOL-8)
+# Info: Altera Quartus synthesis script written to '/home/ecegridfs/a/695r48/ece695r/hw5/graph4/Catapult/fir.v8/quartus_concat_v/concat_rtl.v.aq'
+# Info: Completed transformation 'instance' on solution 'fir.v8': elapsed time 0.70 seconds, memory usage 1510108kB, peak memory usage 1510120kB (SOL-9)
+# Info: Completed transformation 'extract' on solution 'fir.v8': elapsed time 6.45 seconds, memory usage 1510108kB, peak memory usage 1510120kB (SOL-9)

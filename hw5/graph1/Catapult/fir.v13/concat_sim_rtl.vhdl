@@ -1,0 +1,2193 @@
+
+--------> /package/eda/mg/Catapult_10.3d/Mgc_home/pkgs/siflibs/ccs_in_v1.vhd 
+--------------------------------------------------------------------------------
+-- Catapult Synthesis - Sample I/O Port Library
+--
+-- Copyright (c) 2003-2017 Mentor Graphics Corp.
+--       All Rights Reserved
+--
+-- This document may be used and distributed without restriction provided that
+-- this copyright statement is not removed from the file and that any derivative
+-- work contains this copyright notice.
+--
+-- The design information contained in this file is intended to be an example
+-- of the functionality which the end user may study in preparation for creating
+-- their own custom interfaces. This design does not necessarily present a 
+-- complete implementation of the named protocol or standard.
+--
+--------------------------------------------------------------------------------
+
+LIBRARY ieee;
+
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all;
+
+PACKAGE ccs_in_pkg_v1 IS
+
+COMPONENT ccs_in_v1
+  GENERIC (
+    rscid    : INTEGER;
+    width    : INTEGER
+  );
+  PORT (
+    idat   : OUT std_logic_vector(width-1 DOWNTO 0);
+    dat    : IN  std_logic_vector(width-1 DOWNTO 0)
+  );
+END COMPONENT;
+
+END ccs_in_pkg_v1;
+
+LIBRARY ieee;
+
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all; -- Prevent STARC 2.1.1.2 violation
+
+ENTITY ccs_in_v1 IS
+  GENERIC (
+    rscid : INTEGER;
+    width : INTEGER
+  );
+  PORT (
+    idat  : OUT std_logic_vector(width-1 DOWNTO 0);
+    dat   : IN  std_logic_vector(width-1 DOWNTO 0)
+  );
+END ccs_in_v1;
+
+ARCHITECTURE beh OF ccs_in_v1 IS
+BEGIN
+
+  idat <= dat;
+
+END beh;
+
+
+--------> /package/eda/mg/Catapult_10.3d/Mgc_home/pkgs/siflibs/ccs_out_v1.vhd 
+--------------------------------------------------------------------------------
+-- Catapult Synthesis - Sample I/O Port Library
+--
+-- Copyright (c) 2003-2017 Mentor Graphics Corp.
+--       All Rights Reserved
+--
+-- This document may be used and distributed without restriction provided that
+-- this copyright statement is not removed from the file and that any derivative
+-- work contains this copyright notice.
+--
+-- The design information contained in this file is intended to be an example
+-- of the functionality which the end user may study in preparation for creating
+-- their own custom interfaces. This design does not necessarily present a 
+-- complete implementation of the named protocol or standard.
+--
+--------------------------------------------------------------------------------
+
+LIBRARY ieee;
+
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all;
+
+PACKAGE ccs_out_pkg_v1 IS
+
+COMPONENT ccs_out_v1
+  GENERIC (
+    rscid    : INTEGER;
+    width    : INTEGER
+  );
+  PORT (
+    dat    : OUT std_logic_vector(width-1 DOWNTO 0);
+    idat   : IN  std_logic_vector(width-1 DOWNTO 0)
+  );
+END COMPONENT;
+
+END ccs_out_pkg_v1;
+
+LIBRARY ieee;
+
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all; -- Prevent STARC 2.1.1.2 violation
+
+ENTITY ccs_out_v1 IS
+  GENERIC (
+    rscid : INTEGER;
+    width : INTEGER
+  );
+  PORT (
+    dat   : OUT std_logic_vector(width-1 DOWNTO 0);
+    idat  : IN  std_logic_vector(width-1 DOWNTO 0)
+  );
+END ccs_out_v1;
+
+ARCHITECTURE beh OF ccs_out_v1 IS
+BEGIN
+
+  dat <= idat;
+
+END beh;
+
+
+--------> /package/eda/mg/Catapult_10.3d/Mgc_home/pkgs/siflibs/mgc_io_sync_v2.vhd 
+--------------------------------------------------------------------------------
+-- Catapult Synthesis - Sample I/O Port Library
+--
+-- Copyright (c) 2003-2017 Mentor Graphics Corp.
+--       All Rights Reserved
+--
+-- This document may be used and distributed without restriction provided that
+-- this copyright statement is not removed from the file and that any derivative
+-- work contains this copyright notice.
+--
+-- The design information contained in this file is intended to be an example
+-- of the functionality which the end user may study in preparation for creating
+-- their own custom interfaces. This design does not necessarily present a 
+-- complete implementation of the named protocol or standard.
+--
+--------------------------------------------------------------------------------
+
+LIBRARY ieee;
+
+USE ieee.std_logic_1164.all;
+PACKAGE mgc_io_sync_pkg_v2 IS
+
+COMPONENT mgc_io_sync_v2
+  GENERIC (
+    valid    : INTEGER RANGE 0 TO 1
+  );
+  PORT (
+    ld       : IN    std_logic;
+    lz       : OUT   std_logic
+  );
+END COMPONENT;
+
+END mgc_io_sync_pkg_v2;
+
+LIBRARY ieee;
+
+USE ieee.std_logic_1164.all;
+USE ieee.std_logic_unsigned.all; -- Prevent STARC 2.1.1.2 violation
+
+ENTITY mgc_io_sync_v2 IS
+  GENERIC (
+    valid    : INTEGER RANGE 0 TO 1
+  );
+  PORT (
+    ld       : IN    std_logic;
+    lz       : OUT   std_logic
+  );
+END mgc_io_sync_v2;
+
+ARCHITECTURE beh OF mgc_io_sync_v2 IS
+BEGIN
+
+  lz <= ld;
+
+END beh;
+
+
+--------> ./rtl.vhdl 
+-- ----------------------------------------------------------------------
+--  HLS HDL:        VHDL Netlister
+--  HLS Version:    10.3d/815731 Production Release
+--  HLS Date:       Wed Apr 24 14:54:19 PDT 2019
+-- 
+--  Generated by:   695r48@cparch23.ecn.purdue.edu
+--  Generated date: Tue Nov  9 15:17:00 2021
+-- ----------------------------------------------------------------------
+
+-- 
+-- ------------------------------------------------------------------
+--  Design Unit:    fir_Altera_DIST_DIST_1R1W_RBW_rport_1_16_5_32_32_16_gen
+-- ------------------------------------------------------------------
+
+LIBRARY IEEE;
+
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+
+USE work.ccs_in_pkg_v1.ALL;
+USE work.ccs_out_pkg_v1.ALL;
+USE work.mgc_io_sync_pkg_v2.ALL;
+
+
+ENTITY fir_Altera_DIST_DIST_1R1W_RBW_rport_1_16_5_32_32_16_gen IS
+  PORT(
+    q : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+    radr : OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
+    radr_d : IN STD_LOGIC_VECTOR (4 DOWNTO 0);
+    q_d : OUT STD_LOGIC_VECTOR (15 DOWNTO 0);
+    rport_r_ram_ir_internal_RMASK_B_d : IN STD_LOGIC
+  );
+END fir_Altera_DIST_DIST_1R1W_RBW_rport_1_16_5_32_32_16_gen;
+
+ARCHITECTURE v13 OF fir_Altera_DIST_DIST_1R1W_RBW_rport_1_16_5_32_32_16_gen IS
+  -- Default Constants
+
+BEGIN
+  q_d <= q;
+  radr <= (radr_d);
+END v13;
+
+-- ------------------------------------------------------------------
+--  Design Unit:    fir_core_core_fsm
+--  FSM Module
+-- ------------------------------------------------------------------
+
+LIBRARY IEEE;
+
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+
+USE work.ccs_in_pkg_v1.ALL;
+USE work.ccs_out_pkg_v1.ALL;
+USE work.mgc_io_sync_pkg_v2.ALL;
+
+
+ENTITY fir_core_core_fsm IS
+  PORT(
+    clk : IN STD_LOGIC;
+    rst : IN STD_LOGIC;
+    fsm_output : OUT STD_LOGIC_VECTOR (16 DOWNTO 0);
+    MAC_C_7_tr0 : IN STD_LOGIC
+  );
+END fir_core_core_fsm;
+
+ARCHITECTURE v13 OF fir_core_core_fsm IS
+  -- Default Constants
+
+  -- FSM State Type Declaration for fir_core_core_fsm_1
+  TYPE fir_core_core_fsm_1_ST IS (main_C_0, MAC_C_0, MAC_C_1, MAC_C_2, MAC_C_3, MAC_C_4,
+      MAC_C_5, MAC_C_6, MAC_C_7, MAC_C_8, MAC_C_9, MAC_C_10, MAC_C_11, MAC_C_12,
+      MAC_C_13, MAC_C_14, main_C_1);
+
+  SIGNAL state_var : fir_core_core_fsm_1_ST;
+  SIGNAL state_var_NS : fir_core_core_fsm_1_ST;
+
+BEGIN
+  fir_core_core_fsm_1 : PROCESS (MAC_C_7_tr0, state_var)
+  BEGIN
+    CASE state_var IS
+      WHEN MAC_C_0 =>
+        fsm_output <= STD_LOGIC_VECTOR'( "00000000000000010");
+        state_var_NS <= MAC_C_1;
+      WHEN MAC_C_1 =>
+        fsm_output <= STD_LOGIC_VECTOR'( "00000000000000100");
+        state_var_NS <= MAC_C_2;
+      WHEN MAC_C_2 =>
+        fsm_output <= STD_LOGIC_VECTOR'( "00000000000001000");
+        state_var_NS <= MAC_C_3;
+      WHEN MAC_C_3 =>
+        fsm_output <= STD_LOGIC_VECTOR'( "00000000000010000");
+        state_var_NS <= MAC_C_4;
+      WHEN MAC_C_4 =>
+        fsm_output <= STD_LOGIC_VECTOR'( "00000000000100000");
+        state_var_NS <= MAC_C_5;
+      WHEN MAC_C_5 =>
+        fsm_output <= STD_LOGIC_VECTOR'( "00000000001000000");
+        state_var_NS <= MAC_C_6;
+      WHEN MAC_C_6 =>
+        fsm_output <= STD_LOGIC_VECTOR'( "00000000010000000");
+        state_var_NS <= MAC_C_7;
+      WHEN MAC_C_7 =>
+        fsm_output <= STD_LOGIC_VECTOR'( "00000000100000000");
+        IF ( MAC_C_7_tr0 = '1' ) THEN
+          state_var_NS <= main_C_1;
+        ELSE
+          state_var_NS <= MAC_C_8;
+        END IF;
+      WHEN MAC_C_8 =>
+        fsm_output <= STD_LOGIC_VECTOR'( "00000001000000000");
+        state_var_NS <= MAC_C_9;
+      WHEN MAC_C_9 =>
+        fsm_output <= STD_LOGIC_VECTOR'( "00000010000000000");
+        state_var_NS <= MAC_C_10;
+      WHEN MAC_C_10 =>
+        fsm_output <= STD_LOGIC_VECTOR'( "00000100000000000");
+        state_var_NS <= MAC_C_11;
+      WHEN MAC_C_11 =>
+        fsm_output <= STD_LOGIC_VECTOR'( "00001000000000000");
+        state_var_NS <= MAC_C_12;
+      WHEN MAC_C_12 =>
+        fsm_output <= STD_LOGIC_VECTOR'( "00010000000000000");
+        state_var_NS <= MAC_C_13;
+      WHEN MAC_C_13 =>
+        fsm_output <= STD_LOGIC_VECTOR'( "00100000000000000");
+        state_var_NS <= MAC_C_14;
+      WHEN MAC_C_14 =>
+        fsm_output <= STD_LOGIC_VECTOR'( "01000000000000000");
+        state_var_NS <= MAC_C_0;
+      WHEN main_C_1 =>
+        fsm_output <= STD_LOGIC_VECTOR'( "10000000000000000");
+        state_var_NS <= main_C_0;
+      -- main_C_0
+      WHEN OTHERS =>
+        fsm_output <= STD_LOGIC_VECTOR'( "00000000000000001");
+        state_var_NS <= MAC_C_0;
+    END CASE;
+  END PROCESS fir_core_core_fsm_1;
+
+  fir_core_core_fsm_1_REG : PROCESS (clk)
+  BEGIN
+    IF clk'event AND ( clk = '1' ) THEN
+      IF ( rst = '1' ) THEN
+        state_var <= main_C_0;
+      ELSE
+        state_var <= state_var_NS;
+      END IF;
+    END IF;
+  END PROCESS fir_core_core_fsm_1_REG;
+
+END v13;
+
+-- ------------------------------------------------------------------
+--  Design Unit:    fir_core
+-- ------------------------------------------------------------------
+
+LIBRARY IEEE;
+
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+
+USE work.ccs_in_pkg_v1.ALL;
+USE work.ccs_out_pkg_v1.ALL;
+USE work.mgc_io_sync_pkg_v2.ALL;
+
+
+ENTITY fir_core IS
+  PORT(
+    clk : IN STD_LOGIC;
+    rst : IN STD_LOGIC;
+    coeffs_rsc_triosy_lz : OUT STD_LOGIC;
+    in1_rsc_dat : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+    in1_rsc_triosy_lz : OUT STD_LOGIC;
+    out1_rsc_dat : OUT STD_LOGIC_VECTOR (15 DOWNTO 0);
+    out1_rsc_triosy_lz : OUT STD_LOGIC;
+    coeffs_rsci_radr_d : OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
+    coeffs_rsci_q_d : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+    coeffs_rsci_rport_r_ram_ir_internal_RMASK_B_d : OUT STD_LOGIC
+  );
+END fir_core;
+
+ARCHITECTURE v13 OF fir_core IS
+  -- Default Constants
+
+  -- Interconnect Declarations
+  SIGNAL in1_rsci_idat : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL out1_rsci_idat : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL fsm_output : STD_LOGIC_VECTOR (16 DOWNTO 0);
+  SIGNAL MAC_6_acc_2_tmp : STD_LOGIC_VECTOR (5 DOWNTO 0);
+  SIGNAL or_dcpl_17 : STD_LOGIC;
+  SIGNAL or_dcpl_18 : STD_LOGIC;
+  SIGNAL and_dcpl_34 : STD_LOGIC;
+  SIGNAL and_dcpl_36 : STD_LOGIC;
+  SIGNAL or_dcpl_22 : STD_LOGIC;
+  SIGNAL or_dcpl_24 : STD_LOGIC;
+  SIGNAL or_tmp_183 : STD_LOGIC;
+  SIGNAL or_tmp_196 : STD_LOGIC;
+  SIGNAL and_119_cse : STD_LOGIC;
+  SIGNAL MAC_i_or_cse : STD_LOGIC;
+  SIGNAL reg_out1_rsc_triosy_obj_ld_cse : STD_LOGIC;
+  SIGNAL nor_cse : STD_LOGIC;
+  SIGNAL reg_out1_out1_and_cse : STD_LOGIC;
+  SIGNAL MAC_or_9_cse : STD_LOGIC;
+  SIGNAL MAC_2_acc_2_psp_sva_mx0w0 : STD_LOGIC_VECTOR (4 DOWNTO 0);
+  SIGNAL MAC_11_acc_2_psp_sva : STD_LOGIC_VECTOR (4 DOWNTO 0);
+  SIGNAL nor_14_cse : STD_LOGIC;
+  SIGNAL MAC_10_acc_2_psp_sva : STD_LOGIC_VECTOR (4 DOWNTO 0);
+  SIGNAL MAC_i_4_sva : STD_LOGIC;
+  SIGNAL MAC_5_acc_2_psp_sva : STD_LOGIC_VECTOR (4 DOWNTO 0);
+  SIGNAL MAC_4_acc_2_psp_sva : STD_LOGIC_VECTOR (4 DOWNTO 0);
+  SIGNAL MAC_3_acc_2_psp_sva : STD_LOGIC_VECTOR (4 DOWNTO 0);
+  SIGNAL MAC_i_3_sva : STD_LOGIC;
+  SIGNAL MAC_i_2_sva : STD_LOGIC;
+  SIGNAL MAC_acc_3_psp_sva : STD_LOGIC_VECTOR (1 DOWNTO 0);
+  SIGNAL z_out : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL z_out_1 : STD_LOGIC_VECTOR (4 DOWNTO 0);
+  SIGNAL z_out_2 : STD_LOGIC_VECTOR (4 DOWNTO 0);
+  SIGNAL z_out_4 : STD_LOGIC_VECTOR (29 DOWNTO 0);
+  SIGNAL z_out_5 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL z_out_6 : STD_LOGIC_VECTOR (29 DOWNTO 0);
+  SIGNAL z_out_7 : STD_LOGIC_VECTOR (29 DOWNTO 0);
+  SIGNAL z_out_8 : STD_LOGIC_VECTOR (29 DOWNTO 0);
+  SIGNAL z_out_9 : STD_LOGIC_VECTOR (29 DOWNTO 0);
+  SIGNAL z_out_10 : STD_LOGIC_VECTOR (29 DOWNTO 0);
+  SIGNAL regs_15_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_16_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_14_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_17_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_13_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_18_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_12_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_19_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_11_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_20_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_10_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_21_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_9_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_22_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_8_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_23_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_7_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_24_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_6_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_25_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_5_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_26_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_4_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_27_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_3_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_28_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_2_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_29_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_1_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_30_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_0_sva : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_30_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_29_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_28_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_27_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_26_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_25_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_24_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_23_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_22_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_21_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_20_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_19_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_18_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_17_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_16_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_15_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_14_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_13_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_12_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_11_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_10_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_9_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_8_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_7_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_6_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_5_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_4_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_3_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_2_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_1_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL regs_0_sva_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL MAC_mux_itm : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL MAC_3_mul_itm : STD_LOGIC_VECTOR (29 DOWNTO 0);
+  SIGNAL MAC_mux_3_itm : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL MAC_mux_4_itm : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL MAC_mux_5_itm : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL MAC_7_MAC_mux_itm : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL MAC_acc_14_itm : STD_LOGIC_VECTOR (29 DOWNTO 0);
+  SIGNAL MAC_8_MAC_mux_itm : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL MAC_9_MAC_mux_itm : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL MAC_mux_6_itm : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL MAC_10_mul_itm : STD_LOGIC_VECTOR (29 DOWNTO 0);
+  SIGNAL MAC_11_MAC_mux_itm : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL MAC_11_mul_itm : STD_LOGIC_VECTOR (29 DOWNTO 0);
+  SIGNAL MAC_12_MAC_mux_itm : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL MAC_13_MAC_mux_itm : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL MAC_acc_11_itm : STD_LOGIC_VECTOR (29 DOWNTO 0);
+  SIGNAL acc_32_3_7_sva_1 : STD_LOGIC_VECTOR (29 DOWNTO 0);
+  SIGNAL MAC_3_acc_2_psp_sva_mx0w0 : STD_LOGIC_VECTOR (4 DOWNTO 0);
+  SIGNAL MAC_acc_psp_sva_1 : STD_LOGIC_VECTOR (3 DOWNTO 0);
+  SIGNAL MAC_acc_3_psp_sva_1 : STD_LOGIC_VECTOR (1 DOWNTO 0);
+  SIGNAL MAC_11_acc_2_psp_sva_1 : STD_LOGIC_VECTOR (4 DOWNTO 0);
+  SIGNAL MAC_acc_4_psp_sva_1 : STD_LOGIC_VECTOR (2 DOWNTO 0);
+  SIGNAL MAC_11_mul_itm_mx0c0 : STD_LOGIC;
+  SIGNAL MAC_acc_18 : STD_LOGIC_VECTOR (29 DOWNTO 0);
+  SIGNAL and_510_tmp : STD_LOGIC;
+  SIGNAL or_227_tmp : STD_LOGIC;
+  SIGNAL MAC_i_5_0_7_sva_rsp_0 : STD_LOGIC_VECTOR (1 DOWNTO 0);
+  SIGNAL MAC_i_5_0_7_sva_rsp_2 : STD_LOGIC_VECTOR (2 DOWNTO 0);
+  SIGNAL MAC_acc_psp_sva_rsp_0 : STD_LOGIC_VECTOR (1 DOWNTO 0);
+  SIGNAL MAC_acc_psp_sva_rsp_2 : STD_LOGIC;
+  SIGNAL MAC_acc_4_psp_sva_rsp_0 : STD_LOGIC;
+  SIGNAL MAC_acc_4_psp_sva_rsp_2 : STD_LOGIC;
+  SIGNAL reg_MAC_acc_4_psp_rgt_ssc : STD_LOGIC;
+  SIGNAL or_273_ssc : STD_LOGIC;
+  SIGNAL MAC_acc_5_itm_1 : STD_LOGIC;
+  SIGNAL MAC_acc_5_itm_0 : STD_LOGIC;
+  SIGNAL MAC_and_m1c : STD_LOGIC;
+  SIGNAL MAC_and_m1c_1 : STD_LOGIC;
+  SIGNAL MAC_and_m1c_2 : STD_LOGIC;
+  SIGNAL MAC_and_m1c_3 : STD_LOGIC;
+  SIGNAL MAC_conc_125_tmp_2_1 : STD_LOGIC_VECTOR (1 DOWNTO 0);
+  SIGNAL MAC_conc_125_tmp_0 : STD_LOGIC;
+
+  SIGNAL acc_mux1h_nl : STD_LOGIC_VECTOR (29 DOWNTO 0);
+  SIGNAL MAC_acc_19_nl : STD_LOGIC_VECTOR (29 DOWNTO 0);
+  SIGNAL MAC_13_acc_1_nl : STD_LOGIC_VECTOR (29 DOWNTO 0);
+  SIGNAL MAC_acc_16_nl : STD_LOGIC_VECTOR (29 DOWNTO 0);
+  SIGNAL acc_or_nl : STD_LOGIC;
+  SIGNAL MAC_not_4_nl : STD_LOGIC;
+  SIGNAL MAC_and_3_nl : STD_LOGIC;
+  SIGNAL MAC_and_4_nl : STD_LOGIC;
+  SIGNAL MAC_and_5_nl : STD_LOGIC;
+  SIGNAL MAC_and_nl : STD_LOGIC;
+  SIGNAL MAC_and_1_nl : STD_LOGIC;
+  SIGNAL MAC_and_2_nl : STD_LOGIC;
+  SIGNAL MAC_and_22_nl : STD_LOGIC;
+  SIGNAL MAC_and_23_nl : STD_LOGIC;
+  SIGNAL MAC_and_24_nl : STD_LOGIC;
+  SIGNAL MAC_and_25_nl : STD_LOGIC;
+  SIGNAL MAC_MAC_nor_2_nl : STD_LOGIC;
+  SIGNAL MAC_and_13_nl : STD_LOGIC;
+  SIGNAL MAC_and_14_nl : STD_LOGIC;
+  SIGNAL MAC_and_15_nl : STD_LOGIC;
+  SIGNAL MAC_and_16_nl : STD_LOGIC;
+  SIGNAL MAC_and_7_nl : STD_LOGIC;
+  SIGNAL MAC_and_8_nl : STD_LOGIC;
+  SIGNAL MAC_and_9_nl : STD_LOGIC;
+  SIGNAL MAC_and_10_nl : STD_LOGIC;
+  SIGNAL MAC_and_11_nl : STD_LOGIC;
+  SIGNAL MAC_and_12_nl : STD_LOGIC;
+  SIGNAL MAC_9_mul_nl : STD_LOGIC_VECTOR (29 DOWNTO 0);
+  SIGNAL MAC_acc_10_nl : STD_LOGIC_VECTOR (29 DOWNTO 0);
+  SIGNAL MAC_mux1h_nl : STD_LOGIC;
+  SIGNAL MAC_or_4_nl : STD_LOGIC;
+  SIGNAL MAC_mux1h_36_nl : STD_LOGIC_VECTOR (1 DOWNTO 0);
+  SIGNAL MAC_or_6_nl : STD_LOGIC;
+  SIGNAL MAC_or_7_nl : STD_LOGIC;
+  SIGNAL MAC_mux1h_37_nl : STD_LOGIC;
+  SIGNAL MAC_mux1h_38_nl : STD_LOGIC;
+  SIGNAL MAC_mux_43_nl : STD_LOGIC_VECTOR (4 DOWNTO 0);
+  SIGNAL MAC_mux_44_nl : STD_LOGIC_VECTOR (4 DOWNTO 0);
+  SIGNAL MAC_mux_45_nl : STD_LOGIC_VECTOR (29 DOWNTO 0);
+  SIGNAL or_274_nl : STD_LOGIC;
+  SIGNAL MAC_mux_46_nl : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL MAC_mux_47_nl : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL MAC_mux_48_nl : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL MAC_mux_49_nl : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL MAC_mux_50_nl : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL MAC_mux_51_nl : STD_LOGIC_VECTOR (4 DOWNTO 0);
+  SIGNAL MAC_and_27_nl : STD_LOGIC;
+  SIGNAL MAC_and_28_nl : STD_LOGIC;
+  SIGNAL MAC_and_29_nl : STD_LOGIC;
+  SIGNAL MAC_and_30_nl : STD_LOGIC;
+  SIGNAL MAC_and_31_nl : STD_LOGIC;
+  SIGNAL MAC_and_32_nl : STD_LOGIC;
+  SIGNAL MAC_and_33_nl : STD_LOGIC;
+  SIGNAL MAC_and_34_nl : STD_LOGIC;
+  SIGNAL in1_rsci_dat : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL in1_rsci_idat_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+
+  SIGNAL out1_rsci_idat_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL out1_rsci_dat : STD_LOGIC_VECTOR (15 DOWNTO 0);
+
+  COMPONENT fir_core_core_fsm
+    PORT(
+      clk : IN STD_LOGIC;
+      rst : IN STD_LOGIC;
+      fsm_output : OUT STD_LOGIC_VECTOR (16 DOWNTO 0);
+      MAC_C_7_tr0 : IN STD_LOGIC
+    );
+  END COMPONENT;
+  SIGNAL fir_core_core_fsm_inst_fsm_output : STD_LOGIC_VECTOR (16 DOWNTO 0);
+  SIGNAL fir_core_core_fsm_inst_MAC_C_7_tr0 : STD_LOGIC;
+
+  FUNCTION CONV_SL_1_1(input:BOOLEAN)
+  RETURN STD_LOGIC IS
+  BEGIN
+    IF input THEN RETURN '1';ELSE RETURN '0';END IF;
+  END;
+
+  FUNCTION MUX1HOT_s_1_10_2(input_9 : STD_LOGIC;
+  input_8 : STD_LOGIC;
+  input_7 : STD_LOGIC;
+  input_6 : STD_LOGIC;
+  input_5 : STD_LOGIC;
+  input_4 : STD_LOGIC;
+  input_3 : STD_LOGIC;
+  input_2 : STD_LOGIC;
+  input_1 : STD_LOGIC;
+  input_0 : STD_LOGIC;
+  sel : STD_LOGIC_VECTOR(9 DOWNTO 0))
+  RETURN STD_LOGIC IS
+    VARIABLE result : STD_LOGIC;
+    VARIABLE tmp : STD_LOGIC;
+
+    BEGIN
+      tmp := sel(0);
+      result := input_0 and tmp;
+      tmp := sel(1);
+      result := result or ( input_1 and tmp);
+      tmp := sel(2);
+      result := result or ( input_2 and tmp);
+      tmp := sel(3);
+      result := result or ( input_3 and tmp);
+      tmp := sel(4);
+      result := result or ( input_4 and tmp);
+      tmp := sel(5);
+      result := result or ( input_5 and tmp);
+      tmp := sel(6);
+      result := result or ( input_6 and tmp);
+      tmp := sel(7);
+      result := result or ( input_7 and tmp);
+      tmp := sel(8);
+      result := result or ( input_8 and tmp);
+      tmp := sel(9);
+      result := result or ( input_9 and tmp);
+    RETURN result;
+  END;
+
+  FUNCTION MUX1HOT_s_1_12_2(input_11 : STD_LOGIC;
+  input_10 : STD_LOGIC;
+  input_9 : STD_LOGIC;
+  input_8 : STD_LOGIC;
+  input_7 : STD_LOGIC;
+  input_6 : STD_LOGIC;
+  input_5 : STD_LOGIC;
+  input_4 : STD_LOGIC;
+  input_3 : STD_LOGIC;
+  input_2 : STD_LOGIC;
+  input_1 : STD_LOGIC;
+  input_0 : STD_LOGIC;
+  sel : STD_LOGIC_VECTOR(11 DOWNTO 0))
+  RETURN STD_LOGIC IS
+    VARIABLE result : STD_LOGIC;
+    VARIABLE tmp : STD_LOGIC;
+
+    BEGIN
+      tmp := sel(0);
+      result := input_0 and tmp;
+      tmp := sel(1);
+      result := result or ( input_1 and tmp);
+      tmp := sel(2);
+      result := result or ( input_2 and tmp);
+      tmp := sel(3);
+      result := result or ( input_3 and tmp);
+      tmp := sel(4);
+      result := result or ( input_4 and tmp);
+      tmp := sel(5);
+      result := result or ( input_5 and tmp);
+      tmp := sel(6);
+      result := result or ( input_6 and tmp);
+      tmp := sel(7);
+      result := result or ( input_7 and tmp);
+      tmp := sel(8);
+      result := result or ( input_8 and tmp);
+      tmp := sel(9);
+      result := result or ( input_9 and tmp);
+      tmp := sel(10);
+      result := result or ( input_10 and tmp);
+      tmp := sel(11);
+      result := result or ( input_11 and tmp);
+    RETURN result;
+  END;
+
+  FUNCTION MUX1HOT_s_1_9_2(input_8 : STD_LOGIC;
+  input_7 : STD_LOGIC;
+  input_6 : STD_LOGIC;
+  input_5 : STD_LOGIC;
+  input_4 : STD_LOGIC;
+  input_3 : STD_LOGIC;
+  input_2 : STD_LOGIC;
+  input_1 : STD_LOGIC;
+  input_0 : STD_LOGIC;
+  sel : STD_LOGIC_VECTOR(8 DOWNTO 0))
+  RETURN STD_LOGIC IS
+    VARIABLE result : STD_LOGIC;
+    VARIABLE tmp : STD_LOGIC;
+
+    BEGIN
+      tmp := sel(0);
+      result := input_0 and tmp;
+      tmp := sel(1);
+      result := result or ( input_1 and tmp);
+      tmp := sel(2);
+      result := result or ( input_2 and tmp);
+      tmp := sel(3);
+      result := result or ( input_3 and tmp);
+      tmp := sel(4);
+      result := result or ( input_4 and tmp);
+      tmp := sel(5);
+      result := result or ( input_5 and tmp);
+      tmp := sel(6);
+      result := result or ( input_6 and tmp);
+      tmp := sel(7);
+      result := result or ( input_7 and tmp);
+      tmp := sel(8);
+      result := result or ( input_8 and tmp);
+    RETURN result;
+  END;
+
+  FUNCTION MUX1HOT_v_16_3_2(input_2 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_1 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_0 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  sel : STD_LOGIC_VECTOR(2 DOWNTO 0))
+  RETURN STD_LOGIC_VECTOR IS
+    VARIABLE result : STD_LOGIC_VECTOR(15 DOWNTO 0);
+    VARIABLE tmp : STD_LOGIC_VECTOR(15 DOWNTO 0);
+
+    BEGIN
+      tmp := (OTHERS=>sel(0));
+      result := input_0 and tmp;
+      tmp := (OTHERS=>sel( 1));
+      result := result or ( input_1 and tmp);
+      tmp := (OTHERS=>sel( 2));
+      result := result or ( input_2 and tmp);
+    RETURN result;
+  END;
+
+  FUNCTION MUX1HOT_v_16_4_2(input_3 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_2 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_1 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_0 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  sel : STD_LOGIC_VECTOR(3 DOWNTO 0))
+  RETURN STD_LOGIC_VECTOR IS
+    VARIABLE result : STD_LOGIC_VECTOR(15 DOWNTO 0);
+    VARIABLE tmp : STD_LOGIC_VECTOR(15 DOWNTO 0);
+
+    BEGIN
+      tmp := (OTHERS=>sel(0));
+      result := input_0 and tmp;
+      tmp := (OTHERS=>sel( 1));
+      result := result or ( input_1 and tmp);
+      tmp := (OTHERS=>sel( 2));
+      result := result or ( input_2 and tmp);
+      tmp := (OTHERS=>sel( 3));
+      result := result or ( input_3 and tmp);
+    RETURN result;
+  END;
+
+  FUNCTION MUX1HOT_v_16_6_2(input_5 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_4 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_3 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_2 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_1 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_0 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  sel : STD_LOGIC_VECTOR(5 DOWNTO 0))
+  RETURN STD_LOGIC_VECTOR IS
+    VARIABLE result : STD_LOGIC_VECTOR(15 DOWNTO 0);
+    VARIABLE tmp : STD_LOGIC_VECTOR(15 DOWNTO 0);
+
+    BEGIN
+      tmp := (OTHERS=>sel(0));
+      result := input_0 and tmp;
+      tmp := (OTHERS=>sel( 1));
+      result := result or ( input_1 and tmp);
+      tmp := (OTHERS=>sel( 2));
+      result := result or ( input_2 and tmp);
+      tmp := (OTHERS=>sel( 3));
+      result := result or ( input_3 and tmp);
+      tmp := (OTHERS=>sel( 4));
+      result := result or ( input_4 and tmp);
+      tmp := (OTHERS=>sel( 5));
+      result := result or ( input_5 and tmp);
+    RETURN result;
+  END;
+
+  FUNCTION MUX1HOT_v_16_7_2(input_6 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_5 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_4 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_3 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_2 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_1 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_0 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  sel : STD_LOGIC_VECTOR(6 DOWNTO 0))
+  RETURN STD_LOGIC_VECTOR IS
+    VARIABLE result : STD_LOGIC_VECTOR(15 DOWNTO 0);
+    VARIABLE tmp : STD_LOGIC_VECTOR(15 DOWNTO 0);
+
+    BEGIN
+      tmp := (OTHERS=>sel(0));
+      result := input_0 and tmp;
+      tmp := (OTHERS=>sel( 1));
+      result := result or ( input_1 and tmp);
+      tmp := (OTHERS=>sel( 2));
+      result := result or ( input_2 and tmp);
+      tmp := (OTHERS=>sel( 3));
+      result := result or ( input_3 and tmp);
+      tmp := (OTHERS=>sel( 4));
+      result := result or ( input_4 and tmp);
+      tmp := (OTHERS=>sel( 5));
+      result := result or ( input_5 and tmp);
+      tmp := (OTHERS=>sel( 6));
+      result := result or ( input_6 and tmp);
+    RETURN result;
+  END;
+
+  FUNCTION MUX1HOT_v_16_8_2(input_7 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_6 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_5 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_4 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_3 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_2 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_1 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_0 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  sel : STD_LOGIC_VECTOR(7 DOWNTO 0))
+  RETURN STD_LOGIC_VECTOR IS
+    VARIABLE result : STD_LOGIC_VECTOR(15 DOWNTO 0);
+    VARIABLE tmp : STD_LOGIC_VECTOR(15 DOWNTO 0);
+
+    BEGIN
+      tmp := (OTHERS=>sel(0));
+      result := input_0 and tmp;
+      tmp := (OTHERS=>sel( 1));
+      result := result or ( input_1 and tmp);
+      tmp := (OTHERS=>sel( 2));
+      result := result or ( input_2 and tmp);
+      tmp := (OTHERS=>sel( 3));
+      result := result or ( input_3 and tmp);
+      tmp := (OTHERS=>sel( 4));
+      result := result or ( input_4 and tmp);
+      tmp := (OTHERS=>sel( 5));
+      result := result or ( input_5 and tmp);
+      tmp := (OTHERS=>sel( 6));
+      result := result or ( input_6 and tmp);
+      tmp := (OTHERS=>sel( 7));
+      result := result or ( input_7 and tmp);
+    RETURN result;
+  END;
+
+  FUNCTION MUX1HOT_v_2_11_2(input_10 : STD_LOGIC_VECTOR(1 DOWNTO 0);
+  input_9 : STD_LOGIC_VECTOR(1 DOWNTO 0);
+  input_8 : STD_LOGIC_VECTOR(1 DOWNTO 0);
+  input_7 : STD_LOGIC_VECTOR(1 DOWNTO 0);
+  input_6 : STD_LOGIC_VECTOR(1 DOWNTO 0);
+  input_5 : STD_LOGIC_VECTOR(1 DOWNTO 0);
+  input_4 : STD_LOGIC_VECTOR(1 DOWNTO 0);
+  input_3 : STD_LOGIC_VECTOR(1 DOWNTO 0);
+  input_2 : STD_LOGIC_VECTOR(1 DOWNTO 0);
+  input_1 : STD_LOGIC_VECTOR(1 DOWNTO 0);
+  input_0 : STD_LOGIC_VECTOR(1 DOWNTO 0);
+  sel : STD_LOGIC_VECTOR(10 DOWNTO 0))
+  RETURN STD_LOGIC_VECTOR IS
+    VARIABLE result : STD_LOGIC_VECTOR(1 DOWNTO 0);
+    VARIABLE tmp : STD_LOGIC_VECTOR(1 DOWNTO 0);
+
+    BEGIN
+      tmp := (OTHERS=>sel(0));
+      result := input_0 and tmp;
+      tmp := (OTHERS=>sel( 1));
+      result := result or ( input_1 and tmp);
+      tmp := (OTHERS=>sel( 2));
+      result := result or ( input_2 and tmp);
+      tmp := (OTHERS=>sel( 3));
+      result := result or ( input_3 and tmp);
+      tmp := (OTHERS=>sel( 4));
+      result := result or ( input_4 and tmp);
+      tmp := (OTHERS=>sel( 5));
+      result := result or ( input_5 and tmp);
+      tmp := (OTHERS=>sel( 6));
+      result := result or ( input_6 and tmp);
+      tmp := (OTHERS=>sel( 7));
+      result := result or ( input_7 and tmp);
+      tmp := (OTHERS=>sel( 8));
+      result := result or ( input_8 and tmp);
+      tmp := (OTHERS=>sel( 9));
+      result := result or ( input_9 and tmp);
+      tmp := (OTHERS=>sel( 10));
+      result := result or ( input_10 and tmp);
+    RETURN result;
+  END;
+
+  FUNCTION MUX1HOT_v_30_4_2(input_3 : STD_LOGIC_VECTOR(29 DOWNTO 0);
+  input_2 : STD_LOGIC_VECTOR(29 DOWNTO 0);
+  input_1 : STD_LOGIC_VECTOR(29 DOWNTO 0);
+  input_0 : STD_LOGIC_VECTOR(29 DOWNTO 0);
+  sel : STD_LOGIC_VECTOR(3 DOWNTO 0))
+  RETURN STD_LOGIC_VECTOR IS
+    VARIABLE result : STD_LOGIC_VECTOR(29 DOWNTO 0);
+    VARIABLE tmp : STD_LOGIC_VECTOR(29 DOWNTO 0);
+
+    BEGIN
+      tmp := (OTHERS=>sel(0));
+      result := input_0 and tmp;
+      tmp := (OTHERS=>sel( 1));
+      result := result or ( input_1 and tmp);
+      tmp := (OTHERS=>sel( 2));
+      result := result or ( input_2 and tmp);
+      tmp := (OTHERS=>sel( 3));
+      result := result or ( input_3 and tmp);
+    RETURN result;
+  END;
+
+  FUNCTION MUX1HOT_v_30_6_2(input_5 : STD_LOGIC_VECTOR(29 DOWNTO 0);
+  input_4 : STD_LOGIC_VECTOR(29 DOWNTO 0);
+  input_3 : STD_LOGIC_VECTOR(29 DOWNTO 0);
+  input_2 : STD_LOGIC_VECTOR(29 DOWNTO 0);
+  input_1 : STD_LOGIC_VECTOR(29 DOWNTO 0);
+  input_0 : STD_LOGIC_VECTOR(29 DOWNTO 0);
+  sel : STD_LOGIC_VECTOR(5 DOWNTO 0))
+  RETURN STD_LOGIC_VECTOR IS
+    VARIABLE result : STD_LOGIC_VECTOR(29 DOWNTO 0);
+    VARIABLE tmp : STD_LOGIC_VECTOR(29 DOWNTO 0);
+
+    BEGIN
+      tmp := (OTHERS=>sel(0));
+      result := input_0 and tmp;
+      tmp := (OTHERS=>sel( 1));
+      result := result or ( input_1 and tmp);
+      tmp := (OTHERS=>sel( 2));
+      result := result or ( input_2 and tmp);
+      tmp := (OTHERS=>sel( 3));
+      result := result or ( input_3 and tmp);
+      tmp := (OTHERS=>sel( 4));
+      result := result or ( input_4 and tmp);
+      tmp := (OTHERS=>sel( 5));
+      result := result or ( input_5 and tmp);
+    RETURN result;
+  END;
+
+  FUNCTION MUX_s_1_2_2(input_0 : STD_LOGIC;
+  input_1 : STD_LOGIC;
+  sel : STD_LOGIC)
+  RETURN STD_LOGIC IS
+    VARIABLE result : STD_LOGIC;
+
+    BEGIN
+      CASE sel IS
+        WHEN '0' =>
+          result := input_0;
+        WHEN others =>
+          result := input_1;
+      END CASE;
+    RETURN result;
+  END;
+
+  FUNCTION MUX_v_16_27_2x3x7x11x15x19x23(input_0 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_1 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_2 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_4 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_5 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_6 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_8 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_9 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_10 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_12 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_13 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_14 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_16 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_17 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_18 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_20 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_21 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_22 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_24 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_25 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_26 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  sel : STD_LOGIC_VECTOR(4 DOWNTO 0))
+  RETURN STD_LOGIC_VECTOR IS
+    VARIABLE result : STD_LOGIC_VECTOR(15 DOWNTO 0);
+
+    BEGIN
+      CASE sel IS
+        WHEN "00000" =>
+          result := input_0;
+        WHEN "00001" =>
+          result := input_1;
+        WHEN "00010" =>
+          result := input_2;
+        WHEN "00100" =>
+          result := input_4;
+        WHEN "00101" =>
+          result := input_5;
+        WHEN "00110" =>
+          result := input_6;
+        WHEN "01000" =>
+          result := input_8;
+        WHEN "01001" =>
+          result := input_9;
+        WHEN "01010" =>
+          result := input_10;
+        WHEN "01100" =>
+          result := input_12;
+        WHEN "01101" =>
+          result := input_13;
+        WHEN "01110" =>
+          result := input_14;
+        WHEN "10000" =>
+          result := input_16;
+        WHEN "10001" =>
+          result := input_17;
+        WHEN "10010" =>
+          result := input_18;
+        WHEN "10100" =>
+          result := input_20;
+        WHEN "10101" =>
+          result := input_21;
+        WHEN "10110" =>
+          result := input_22;
+        WHEN "11000" =>
+          result := input_24;
+        WHEN "11001" =>
+          result := input_25;
+        WHEN others =>
+          result := input_26;
+      END CASE;
+    RETURN result;
+  END;
+
+  FUNCTION MUX_v_16_2_2(input_0 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_1 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  sel : STD_LOGIC)
+  RETURN STD_LOGIC_VECTOR IS
+    VARIABLE result : STD_LOGIC_VECTOR(15 DOWNTO 0);
+
+    BEGIN
+      CASE sel IS
+        WHEN '0' =>
+          result := input_0;
+        WHEN others =>
+          result := input_1;
+      END CASE;
+    RETURN result;
+  END;
+
+  FUNCTION MUX_v_16_31_2x0x1x2x5x6x7x8x9x10x11x12x13x14x15x18x19x20x21x22x23x24x25x26x27x28(input_3
+      : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_4 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_16 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_17 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_29 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_30 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  sel : STD_LOGIC_VECTOR(4 DOWNTO 0))
+  RETURN STD_LOGIC_VECTOR IS
+    VARIABLE result : STD_LOGIC_VECTOR(15 DOWNTO 0);
+
+    BEGIN
+      CASE sel IS
+        WHEN "00011" =>
+          result := input_3;
+        WHEN "00100" =>
+          result := input_4;
+        WHEN "10000" =>
+          result := input_16;
+        WHEN "10001" =>
+          result := input_17;
+        WHEN "11101" =>
+          result := input_29;
+        WHEN others =>
+          result := input_30;
+      END CASE;
+    RETURN result;
+  END;
+
+  FUNCTION MUX_v_16_32_2x0x1x2x3x4x6x7x8x9x10x11x12x13x14x15x16x17x19x20x21x22x23x24x25x26x27x28x29x30(input_5
+      : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_18 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  input_31 : STD_LOGIC_VECTOR(15 DOWNTO 0);
+  sel : STD_LOGIC_VECTOR(4 DOWNTO 0))
+  RETURN STD_LOGIC_VECTOR IS
+    VARIABLE result : STD_LOGIC_VECTOR(15 DOWNTO 0);
+
+    BEGIN
+      CASE sel IS
+        WHEN "00101" =>
+          result := input_5;
+        WHEN "10010" =>
+          result := input_18;
+        WHEN others =>
+          result := input_31;
+      END CASE;
+    RETURN result;
+  END;
+
+  FUNCTION MUX_v_2_2_2(input_0 : STD_LOGIC_VECTOR(1 DOWNTO 0);
+  input_1 : STD_LOGIC_VECTOR(1 DOWNTO 0);
+  sel : STD_LOGIC)
+  RETURN STD_LOGIC_VECTOR IS
+    VARIABLE result : STD_LOGIC_VECTOR(1 DOWNTO 0);
+
+    BEGIN
+      CASE sel IS
+        WHEN '0' =>
+          result := input_0;
+        WHEN others =>
+          result := input_1;
+      END CASE;
+    RETURN result;
+  END;
+
+  FUNCTION MUX_v_30_2_2(input_0 : STD_LOGIC_VECTOR(29 DOWNTO 0);
+  input_1 : STD_LOGIC_VECTOR(29 DOWNTO 0);
+  sel : STD_LOGIC)
+  RETURN STD_LOGIC_VECTOR IS
+    VARIABLE result : STD_LOGIC_VECTOR(29 DOWNTO 0);
+
+    BEGIN
+      CASE sel IS
+        WHEN '0' =>
+          result := input_0;
+        WHEN others =>
+          result := input_1;
+      END CASE;
+    RETURN result;
+  END;
+
+  FUNCTION MUX_v_5_2_2(input_0 : STD_LOGIC_VECTOR(4 DOWNTO 0);
+  input_1 : STD_LOGIC_VECTOR(4 DOWNTO 0);
+  sel : STD_LOGIC)
+  RETURN STD_LOGIC_VECTOR IS
+    VARIABLE result : STD_LOGIC_VECTOR(4 DOWNTO 0);
+
+    BEGIN
+      CASE sel IS
+        WHEN '0' =>
+          result := input_0;
+        WHEN others =>
+          result := input_1;
+      END CASE;
+    RETURN result;
+  END;
+
+BEGIN
+  in1_rsci : work.ccs_in_pkg_v1.ccs_in_v1
+    GENERIC MAP(
+      rscid => 2,
+      width => 16
+      )
+    PORT MAP(
+      dat => in1_rsci_dat,
+      idat => in1_rsci_idat_1
+    );
+  in1_rsci_dat <= in1_rsc_dat;
+  in1_rsci_idat <= in1_rsci_idat_1;
+
+  out1_rsci : work.ccs_out_pkg_v1.ccs_out_v1
+    GENERIC MAP(
+      rscid => 3,
+      width => 16
+      )
+    PORT MAP(
+      idat => out1_rsci_idat_1,
+      dat => out1_rsci_dat
+    );
+  out1_rsci_idat_1 <= out1_rsci_idat;
+  out1_rsc_dat <= out1_rsci_dat;
+
+  coeffs_rsc_triosy_obj : work.mgc_io_sync_pkg_v2.mgc_io_sync_v2
+    GENERIC MAP(
+      valid => 0
+      )
+    PORT MAP(
+      ld => reg_out1_rsc_triosy_obj_ld_cse,
+      lz => coeffs_rsc_triosy_lz
+    );
+  in1_rsc_triosy_obj : work.mgc_io_sync_pkg_v2.mgc_io_sync_v2
+    GENERIC MAP(
+      valid => 0
+      )
+    PORT MAP(
+      ld => reg_out1_rsc_triosy_obj_ld_cse,
+      lz => in1_rsc_triosy_lz
+    );
+  out1_rsc_triosy_obj : work.mgc_io_sync_pkg_v2.mgc_io_sync_v2
+    GENERIC MAP(
+      valid => 0
+      )
+    PORT MAP(
+      ld => reg_out1_rsc_triosy_obj_ld_cse,
+      lz => out1_rsc_triosy_lz
+    );
+  fir_core_core_fsm_inst : fir_core_core_fsm
+    PORT MAP(
+      clk => clk,
+      rst => rst,
+      fsm_output => fir_core_core_fsm_inst_fsm_output,
+      MAC_C_7_tr0 => fir_core_core_fsm_inst_MAC_C_7_tr0
+    );
+  fsm_output <= fir_core_core_fsm_inst_fsm_output;
+  fir_core_core_fsm_inst_MAC_C_7_tr0 <= MAC_i_5_0_7_sva_rsp_0(1);
+
+  reg_out1_out1_and_cse <= (fsm_output(8)) AND (MAC_i_5_0_7_sva_rsp_0(1));
+  MAC_i_or_cse <= (fsm_output(0)) OR (fsm_output(8));
+  nor_14_cse <= NOT((fsm_output(16)) OR (fsm_output(0)));
+  or_273_ssc <= (fsm_output(0)) OR (fsm_output(16)) OR (fsm_output(3));
+  nor_cse <= NOT(CONV_SL_1_1(fsm_output(15 DOWNTO 14)/=STD_LOGIC_VECTOR'("00")));
+  MAC_2_acc_2_psp_sva_mx0w0 <= STD_LOGIC_VECTOR(CONV_SIGNED(SIGNED(z_out_2) + SIGNED'(
+      "00001"), 5));
+  MAC_acc_10_nl <= STD_LOGIC_VECTOR(CONV_UNSIGNED(UNSIGNED(MAC_acc_14_itm) + UNSIGNED(MAC_acc_18),
+      30));
+  acc_32_3_7_sva_1 <= STD_LOGIC_VECTOR(CONV_UNSIGNED(CONV_UNSIGNED(UNSIGNED(MAC_acc_10_nl),
+      30) + UNSIGNED(MAC_acc_11_itm), 30));
+  MAC_3_acc_2_psp_sva_mx0w0 <= STD_LOGIC_VECTOR(CONV_SIGNED(SIGNED(MAC_2_acc_2_psp_sva_mx0w0)
+      + SIGNED'( "00001"), 5));
+  MAC_6_acc_2_tmp <= STD_LOGIC_VECTOR(CONV_SIGNED(CONV_SIGNED(CONV_UNSIGNED(UNSIGNED(z_out_2),
+      5), 6) + SIGNED'( "000001"), 6));
+  MAC_acc_psp_sva_1 <= STD_LOGIC_VECTOR(CONV_UNSIGNED(CONV_UNSIGNED(CONV_UNSIGNED(UNSIGNED('1'
+      & STD_LOGIC_VECTOR(CONV_SIGNED(CONV_SIGNED(NOT (MAC_6_acc_2_tmp(0)), 1),2))),
+      3), 4) + UNSIGNED'( "0001"), 4));
+  MAC_acc_3_psp_sva_1 <= STD_LOGIC_VECTOR(CONV_UNSIGNED(CONV_UNSIGNED(CONV_UNSIGNED(CONV_UNSIGNED(MAC_acc_psp_sva_1(0),
+      1), 1), 2) + UNSIGNED'( "01"), 2));
+  MAC_11_acc_2_psp_sva_1 <= STD_LOGIC_VECTOR(CONV_UNSIGNED(UNSIGNED((MAC_10_acc_2_psp_sva(4
+      DOWNTO 2)) & '1' & (MAC_10_acc_2_psp_sva(0))) + UNSIGNED'( "00001"), 5));
+  MAC_acc_4_psp_sva_1 <= STD_LOGIC_VECTOR(CONV_UNSIGNED(CONV_UNSIGNED(CONV_UNSIGNED(UNSIGNED(CONV_SIGNED(CONV_SIGNED(MAC_11_acc_2_psp_sva_1(0),
+      1),2)), 2), 3) + UNSIGNED'( "001"), 3));
+  MAC_acc_18 <= STD_LOGIC_VECTOR(CONV_UNSIGNED(UNSIGNED(MAC_3_mul_itm) + UNSIGNED(MAC_11_mul_itm),
+      30));
+  and_119_cse <= CONV_SL_1_1(fsm_output(10 DOWNTO 9)/=STD_LOGIC_VECTOR'("00"));
+  or_dcpl_17 <= CONV_SL_1_1(fsm_output(7 DOWNTO 6)/=STD_LOGIC_VECTOR'("00"));
+  or_dcpl_18 <= or_dcpl_17 OR CONV_SL_1_1(fsm_output(5 DOWNTO 4)/=STD_LOGIC_VECTOR'("00"));
+  and_dcpl_34 <= (NOT (fsm_output(13))) AND (NOT (fsm_output(1))) AND nor_cse;
+  and_dcpl_36 <= nor_14_cse AND (NOT (fsm_output(2)));
+  or_dcpl_22 <= (fsm_output(5)) OR (fsm_output(3));
+  or_dcpl_24 <= or_dcpl_17 OR (fsm_output(4));
+  or_tmp_183 <= and_dcpl_34 AND and_dcpl_36;
+  or_tmp_196 <= or_dcpl_24 OR (fsm_output(5)) OR (fsm_output(9)) OR (fsm_output(8));
+  MAC_11_mul_itm_mx0c0 <= (fsm_output(12)) OR (fsm_output(3));
+  MAC_or_9_cse <= (fsm_output(2)) OR (fsm_output(11));
+  MAC_or_4_nl <= (fsm_output(7)) OR (fsm_output(12)) OR (fsm_output(13));
+  MAC_mux1h_nl <= MUX1HOT_s_1_9_2((MAC_2_acc_2_psp_sva_mx0w0(4)), (MAC_10_acc_2_psp_sva(4)),
+      MAC_i_4_sva, (MAC_5_acc_2_psp_sva(4)), (MAC_4_acc_2_psp_sva(4)), (MAC_3_acc_2_psp_sva(4)),
+      (MAC_i_5_0_7_sva_rsp_0(0)), (MAC_i_5_0_7_sva_rsp_0(0)), (MAC_11_acc_2_psp_sva(4)),
+      STD_LOGIC_VECTOR'( (fsm_output(1)) & MAC_or_9_cse & (fsm_output(3)) & (fsm_output(4))
+      & (fsm_output(5)) & (fsm_output(6)) & MAC_or_4_nl & (fsm_output(8)) & and_119_cse));
+  MAC_or_6_nl <= CONV_SL_1_1(fsm_output(13 DOWNTO 12)/=STD_LOGIC_VECTOR'("00"));
+  MAC_mux1h_36_nl <= MUX1HOT_v_2_11_2((MAC_2_acc_2_psp_sva_mx0w0(3 DOWNTO 2)), (MAC_10_acc_2_psp_sva(3
+      DOWNTO 2)), STD_LOGIC_VECTOR'( MAC_i_3_sva & MAC_i_2_sva), (MAC_5_acc_2_psp_sva(3
+      DOWNTO 2)), (MAC_4_acc_2_psp_sva(3 DOWNTO 2)), (MAC_3_acc_2_psp_sva(3 DOWNTO
+      2)), STD_LOGIC_VECTOR'( "01"), STD_LOGIC_VECTOR'( '0' & (MAC_i_5_0_7_sva_rsp_2(2))),
+      STD_LOGIC_VECTOR'( '1' & MAC_acc_4_psp_sva_rsp_0), STD_LOGIC_VECTOR'( "10"),
+      MAC_acc_psp_sva_rsp_0, STD_LOGIC_VECTOR'( (fsm_output(1)) & MAC_or_9_cse &
+      (fsm_output(3)) & (fsm_output(4)) & (fsm_output(5)) & (fsm_output(6)) & (fsm_output(7))
+      & (fsm_output(8)) & (fsm_output(9)) & (fsm_output(10)) & MAC_or_6_nl));
+  MAC_mux1h_37_nl <= MUX1HOT_s_1_10_2((MAC_2_acc_2_psp_sva_mx0w0(1)), (MAC_10_acc_2_psp_sva(1)),
+      MAC_acc_5_itm_1, (MAC_5_acc_2_psp_sva(1)), (MAC_4_acc_2_psp_sva(1)), (MAC_3_acc_2_psp_sva(1)),
+      (NOT (MAC_i_5_0_7_sva_rsp_2(0))), (MAC_i_5_0_7_sva_rsp_2(1)), (MAC_11_acc_2_psp_sva(0)),
+      (MAC_acc_3_psp_sva(1)), STD_LOGIC_VECTOR'( (fsm_output(1)) & (fsm_output(2))
+      & (fsm_output(3)) & (fsm_output(4)) & (fsm_output(5)) & (fsm_output(6)) & (fsm_output(7))
+      & (fsm_output(8)) & (fsm_output(10)) & (fsm_output(12))));
+  MAC_or_7_nl <= (MAC_mux1h_37_nl AND (NOT((fsm_output(9)) OR (fsm_output(13)))))
+      OR (fsm_output(11));
+  MAC_mux1h_38_nl <= MUX1HOT_s_1_12_2((MAC_2_acc_2_psp_sva_mx0w0(0)), (MAC_10_acc_2_psp_sva(0)),
+      MAC_acc_5_itm_0, (MAC_5_acc_2_psp_sva(0)), (MAC_4_acc_2_psp_sva(0)), (MAC_3_acc_2_psp_sva(0)),
+      (NOT (MAC_i_5_0_7_sva_rsp_2(0))), (MAC_i_5_0_7_sva_rsp_2(0)), MAC_acc_4_psp_sva_rsp_2,
+      (MAC_11_acc_2_psp_sva(0)), (MAC_acc_3_psp_sva(0)), MAC_acc_psp_sva_rsp_2, STD_LOGIC_VECTOR'(
+      (fsm_output(1)) & MAC_or_9_cse & (fsm_output(3)) & (fsm_output(4)) & (fsm_output(5))
+      & (fsm_output(6)) & (fsm_output(7)) & (fsm_output(8)) & (fsm_output(9)) & (fsm_output(10))
+      & (fsm_output(12)) & (fsm_output(13))));
+  coeffs_rsci_radr_d <= MAC_mux1h_nl & MAC_mux1h_36_nl & MAC_or_7_nl & MAC_mux1h_38_nl;
+  coeffs_rsci_rport_r_ram_ir_internal_RMASK_B_d <= (nor_cse AND (NOT (fsm_output(16)))
+      AND (NOT((fsm_output(0)) OR (fsm_output(8))))) OR ((NOT (MAC_i_5_0_7_sva_rsp_0(1)))
+      AND (fsm_output(8)));
+  or_227_tmp <= or_dcpl_24 OR or_dcpl_22;
+  and_510_tmp <= and_dcpl_34 AND nor_14_cse AND CONV_SL_1_1(fsm_output(3 DOWNTO 2)=STD_LOGIC_VECTOR'("00"));
+  reg_MAC_acc_4_psp_rgt_ssc <= NOT(or_dcpl_24 OR (fsm_output(5)) OR (fsm_output(8)));
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        out1_rsci_idat <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_4_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_17_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_30_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_3_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_16_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_29_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_2_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_15_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_28_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_1_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_14_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_27_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_0_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_13_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_26_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_5_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_7_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_8_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_9_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_11_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_12_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_19_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_20_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_21_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_23_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_24_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_25_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_10_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_22_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_6_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+        regs_18_sva <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( reg_out1_out1_and_cse = '1' ) THEN
+        out1_rsci_idat <= acc_32_3_7_sva_1(29 DOWNTO 14);
+        regs_4_sva <= regs_4_sva_1;
+        regs_17_sva <= regs_17_sva_1;
+        regs_30_sva <= regs_30_sva_1;
+        regs_3_sva <= regs_3_sva_1;
+        regs_16_sva <= regs_16_sva_1;
+        regs_29_sva <= regs_29_sva_1;
+        regs_2_sva <= regs_2_sva_1;
+        regs_15_sva <= regs_15_sva_1;
+        regs_28_sva <= regs_28_sva_1;
+        regs_1_sva <= regs_1_sva_1;
+        regs_14_sva <= regs_14_sva_1;
+        regs_27_sva <= regs_27_sva_1;
+        regs_0_sva <= regs_0_sva_1;
+        regs_13_sva <= regs_13_sva_1;
+        regs_26_sva <= regs_26_sva_1;
+        regs_5_sva <= regs_5_sva_1;
+        regs_7_sva <= regs_7_sva_1;
+        regs_8_sva <= regs_8_sva_1;
+        regs_9_sva <= regs_9_sva_1;
+        regs_11_sva <= regs_11_sva_1;
+        regs_12_sva <= regs_12_sva_1;
+        regs_19_sva <= regs_19_sva_1;
+        regs_20_sva <= regs_20_sva_1;
+        regs_21_sva <= regs_21_sva_1;
+        regs_23_sva <= regs_23_sva_1;
+        regs_24_sva <= regs_24_sva_1;
+        regs_25_sva <= regs_25_sva_1;
+        regs_10_sva <= regs_10_sva_1;
+        regs_22_sva <= regs_22_sva_1;
+        regs_6_sva <= regs_6_sva_1;
+        regs_18_sva <= regs_18_sva_1;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_i_4_sva <= '0';
+        MAC_i_2_sva <= '0';
+      ELSIF ( MAC_i_or_cse = '1' ) THEN
+        MAC_i_4_sva <= (MAC_11_acc_2_psp_sva(4)) AND (fsm_output(8));
+        MAC_i_2_sva <= MAC_acc_4_psp_sva_rsp_0 AND (fsm_output(8));
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_i_3_sva <= '0';
+      ELSIF ( ((fsm_output(15)) OR (fsm_output(0))) = '1' ) THEN
+        MAC_i_3_sva <= fsm_output(15);
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_0_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_0_sva_1 <= in1_rsci_idat;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        reg_out1_rsc_triosy_obj_ld_cse <= '0';
+        MAC_10_mul_itm <= STD_LOGIC_VECTOR'( "000000000000000000000000000000");
+      ELSE
+        reg_out1_rsc_triosy_obj_ld_cse <= reg_out1_out1_and_cse;
+        MAC_10_mul_itm <= MUX1HOT_v_30_4_2(z_out_10, z_out_9, z_out_7, z_out_8, STD_LOGIC_VECTOR'(
+            (fsm_output(4)) & (fsm_output(6)) & (fsm_output(11)) & (fsm_output(13))));
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_30_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_30_sva_1 <= regs_29_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_29_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_29_sva_1 <= regs_28_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_28_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_28_sva_1 <= regs_27_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_27_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_27_sva_1 <= regs_26_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_26_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_26_sva_1 <= regs_25_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_25_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_25_sva_1 <= regs_24_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_24_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_24_sva_1 <= regs_23_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_23_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_23_sva_1 <= regs_22_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_22_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_22_sva_1 <= regs_21_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_21_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_21_sva_1 <= regs_20_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_20_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_20_sva_1 <= regs_19_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_19_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_19_sva_1 <= regs_18_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_18_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_18_sva_1 <= regs_17_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_17_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_17_sva_1 <= regs_16_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_16_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_16_sva_1 <= regs_15_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_15_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_15_sva_1 <= regs_14_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_14_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_14_sva_1 <= regs_13_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_13_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_13_sva_1 <= regs_12_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_12_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_12_sva_1 <= regs_11_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_11_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_11_sva_1 <= regs_10_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_10_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_10_sva_1 <= regs_9_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_9_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_9_sva_1 <= regs_8_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_8_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_8_sva_1 <= regs_7_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_7_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_7_sva_1 <= regs_6_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_6_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_6_sva_1 <= regs_5_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_5_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_5_sva_1 <= regs_4_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_4_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_4_sva_1 <= regs_3_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_3_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_3_sva_1 <= regs_2_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_2_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_2_sva_1 <= regs_1_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        regs_1_sva_1 <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( nor_14_cse = '0' ) THEN
+        regs_1_sva_1 <= regs_0_sva;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_acc_11_itm <= STD_LOGIC_VECTOR'( "000000000000000000000000000000");
+      ELSIF ( ((fsm_output(7)) OR (fsm_output(14)) OR (fsm_output(15)) OR (fsm_output(0))
+          OR (fsm_output(12)) OR (fsm_output(8))) = '1' ) THEN
+        MAC_acc_11_itm <= MUX_v_30_2_2(STD_LOGIC_VECTOR'("000000000000000000000000000000"),
+            acc_mux1h_nl, MAC_not_4_nl);
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_acc_5_itm_1 <= '0';
+        MAC_acc_5_itm_0 <= '0';
+      ELSIF ( or_273_ssc = '1' ) THEN
+        MAC_acc_5_itm_1 <= (MAC_acc_4_psp_sva_1(0)) AND nor_14_cse;
+        MAC_acc_5_itm_0 <= (NOT (MAC_acc_4_psp_sva_1(0))) AND nor_14_cse;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_mux_3_itm <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( (fsm_output(1)) = '1' ) THEN
+        MAC_mux_3_itm <= z_out;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_3_acc_2_psp_sva <= STD_LOGIC_VECTOR'( "00000");
+      ELSIF ( (fsm_output(1)) = '1' ) THEN
+        MAC_3_acc_2_psp_sva <= MAC_3_acc_2_psp_sva_mx0w0;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_4_acc_2_psp_sva <= STD_LOGIC_VECTOR'( "00000");
+      ELSIF ( (fsm_output(1)) = '1' ) THEN
+        MAC_4_acc_2_psp_sva <= z_out_1;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_mux_itm <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( (fsm_output(1)) = '1' ) THEN
+        MAC_mux_itm <= MUX_v_16_27_2x3x7x11x15x19x23(regs_0_sva_1, regs_0_sva, regs_1_sva,
+            regs_3_sva, regs_4_sva, regs_5_sva, regs_7_sva, regs_8_sva, regs_9_sva,
+            regs_11_sva, regs_12_sva, regs_13_sva, regs_15_sva, regs_16_sva, regs_17_sva,
+            regs_19_sva, regs_20_sva, regs_21_sva, regs_23_sva, regs_24_sva, regs_25_sva,
+            STD_LOGIC_VECTOR'( MAC_i_4_sva & MAC_i_3_sva & MAC_i_2_sva & MAC_acc_5_itm_1
+            & MAC_acc_5_itm_0));
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_10_acc_2_psp_sva <= STD_LOGIC_VECTOR'( "00000");
+      ELSIF ( (NOT(or_dcpl_18 OR and_119_cse OR (fsm_output(3)) OR (fsm_output(8))))
+          = '1' ) THEN
+        MAC_10_acc_2_psp_sva <= MUX_v_5_2_2(z_out_2, ((z_out_1(4 DOWNTO 2)) & '1'
+            & (z_out_1(0))), fsm_output(2));
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_11_MAC_mux_itm <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( ((NOT(and_dcpl_34 AND nor_14_cse AND (NOT (fsm_output(12))))) OR (fsm_output(3)))
+          = '1' ) THEN
+        MAC_11_MAC_mux_itm <= MUX1HOT_v_16_4_2(regs_0_sva, regs_13_sva, regs_26_sva,
+            z_out_5, STD_LOGIC_VECTOR'( MAC_and_3_nl & MAC_and_4_nl & MAC_and_5_nl
+            & (fsm_output(3))));
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_12_MAC_mux_itm <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( (NOT(or_dcpl_18 OR and_119_cse OR (fsm_output(8)))) = '1' ) THEN
+        MAC_12_MAC_mux_itm <= MUX1HOT_v_16_7_2(regs_1_sva, regs_14_sva, regs_27_sva,
+            regs_7_sva, regs_10_sva, regs_23_sva, regs_26_sva, STD_LOGIC_VECTOR'(
+            MAC_and_nl & MAC_and_1_nl & MAC_and_2_nl & MAC_and_22_nl & MAC_and_23_nl
+            & MAC_and_24_nl & MAC_and_25_nl));
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_3_mul_itm <= STD_LOGIC_VECTOR'( "000000000000000000000000000000");
+      ELSIF ( ((fsm_output(2)) OR (fsm_output(8))) = '1' ) THEN
+        MAC_3_mul_itm <= MUX_v_30_2_2(z_out_7, z_out_6, fsm_output(8));
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_mux_4_itm <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( (fsm_output(2)) = '1' ) THEN
+        MAC_mux_4_itm <= z_out;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_mux_5_itm <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( (fsm_output(2)) = '1' ) THEN
+        MAC_mux_5_itm <= MUX_v_16_32_2x0x1x2x3x4x6x7x8x9x10x11x12x13x14x15x16x17x19x20x21x22x23x24x25x26x27x28x29x30(regs_4_sva,
+            regs_17_sva, regs_30_sva, z_out_2);
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_5_acc_2_psp_sva <= STD_LOGIC_VECTOR'( "00000");
+      ELSIF ( (fsm_output(2)) = '1' ) THEN
+        MAC_5_acc_2_psp_sva <= z_out_2;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_9_MAC_mux_itm <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( ((fsm_output(1)) OR (fsm_output(14)) OR (fsm_output(15)) OR (NOT and_dcpl_36))
+          = '1' ) THEN
+        MAC_9_MAC_mux_itm <= z_out_5;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_acc_3_psp_sva <= STD_LOGIC_VECTOR'( "00");
+      ELSIF ( (NOT(and_dcpl_34 AND nor_14_cse AND (NOT (fsm_output(2))) AND (NOT
+          (fsm_output(12))))) = '1' ) THEN
+        MAC_acc_3_psp_sva <= MAC_acc_3_psp_sva_1;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_7_MAC_mux_itm <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( (NOT(or_dcpl_24 OR or_dcpl_22 OR (fsm_output(8)))) = '1' ) THEN
+        MAC_7_MAC_mux_itm <= MUX1HOT_v_16_3_2(regs_15_sva, regs_18_sva, regs_5_sva,
+            STD_LOGIC_VECTOR'( (NOT (MAC_6_acc_2_tmp(1))) & (MAC_6_acc_2_tmp(0))
+            & (MAC_6_acc_2_tmp(2))));
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_8_MAC_mux_itm <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( or_227_tmp = '0' ) THEN
+        MAC_8_MAC_mux_itm <= MUX_v_16_2_2(regs_19_sva, regs_6_sva, MAC_MAC_nor_2_nl);
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_mux_6_itm <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( and_510_tmp = '0' ) THEN
+        MAC_mux_6_itm <= MUX1HOT_v_16_4_2(regs_20_sva, regs_21_sva, regs_8_sva, regs_9_sva,
+            STD_LOGIC_VECTOR'( MAC_and_13_nl & MAC_and_14_nl & MAC_and_15_nl & MAC_and_16_nl));
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_13_MAC_mux_itm <= STD_LOGIC_VECTOR'( "0000000000000000");
+      ELSIF ( or_tmp_196 = '0' ) THEN
+        MAC_13_MAC_mux_itm <= MUX1HOT_v_16_6_2(regs_11_sva, regs_12_sva, regs_23_sva,
+            regs_24_sva, regs_27_sva, regs_28_sva, STD_LOGIC_VECTOR'( MAC_and_7_nl
+            & MAC_and_8_nl & MAC_and_9_nl & MAC_and_10_nl & MAC_and_11_nl & MAC_and_12_nl));
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_11_acc_2_psp_sva <= STD_LOGIC_VECTOR'( "00000");
+      ELSIF ( or_tmp_196 = '0' ) THEN
+        MAC_11_acc_2_psp_sva <= MAC_11_acc_2_psp_sva_1;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_11_mul_itm <= STD_LOGIC_VECTOR'( "000000000000000000000000000000");
+      ELSIF ( ((fsm_output(7)) OR (fsm_output(5)) OR (fsm_output(14)) OR (fsm_output(9))
+          OR (fsm_output(10)) OR MAC_11_mul_itm_mx0c0) = '1' ) THEN
+        MAC_11_mul_itm <= MUX1HOT_v_30_6_2(z_out_6, z_out_7, z_out_8, z_out_9, z_out_10,
+            STD_LOGIC_VECTOR(CONV_UNSIGNED(UNSIGNED(MAC_9_mul_nl), 30)), STD_LOGIC_VECTOR'(
+            MAC_11_mul_itm_mx0c0 & (fsm_output(5)) & (fsm_output(7)) & (fsm_output(9))
+            & (fsm_output(10)) & (fsm_output(14))));
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_acc_14_itm <= STD_LOGIC_VECTOR'( "000000000000000000000000000000");
+      ELSIF ( ((fsm_output(5)) OR (fsm_output(10))) = '1' ) THEN
+        MAC_acc_14_itm <= z_out_4;
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_i_5_0_7_sva_rsp_0 <= STD_LOGIC_VECTOR'( "00");
+      ELSIF ( or_tmp_183 = '0' ) THEN
+        MAC_i_5_0_7_sva_rsp_0 <= MAC_6_acc_2_tmp(5 DOWNTO 4);
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_i_5_0_7_sva_rsp_2 <= STD_LOGIC_VECTOR'( "000");
+      ELSIF ( or_tmp_183 = '0' ) THEN
+        MAC_i_5_0_7_sva_rsp_2 <= MAC_6_acc_2_tmp(2 DOWNTO 0);
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_acc_psp_sva_rsp_0 <= STD_LOGIC_VECTOR'( "00");
+      ELSIF ( or_tmp_183 = '0' ) THEN
+        MAC_acc_psp_sva_rsp_0 <= MAC_acc_psp_sva_1(3 DOWNTO 2);
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_acc_psp_sva_rsp_2 <= '0';
+      ELSIF ( or_tmp_183 = '0' ) THEN
+        MAC_acc_psp_sva_rsp_2 <= MAC_acc_psp_sva_1(0);
+      END IF;
+    END IF;
+  END PROCESS;
+  PROCESS (clk)
+  BEGIN
+    IF clk'EVENT AND ( clk = '1' ) THEN
+      IF (rst = '1') THEN
+        MAC_acc_4_psp_sva_rsp_0 <= '0';
+        MAC_acc_4_psp_sva_rsp_2 <= '0';
+      ELSIF ( reg_MAC_acc_4_psp_rgt_ssc = '1' ) THEN
+        MAC_acc_4_psp_sva_rsp_0 <= MAC_acc_4_psp_sva_1(2);
+        MAC_acc_4_psp_sva_rsp_2 <= MAC_acc_4_psp_sva_1(0);
+      END IF;
+    END IF;
+  END PROCESS;
+  MAC_acc_19_nl <= STD_LOGIC_VECTOR(CONV_UNSIGNED(UNSIGNED(z_out_4) + UNSIGNED(MAC_acc_11_itm),
+      30));
+  MAC_acc_16_nl <= STD_LOGIC_VECTOR(CONV_SIGNED(SIGNED(MAC_acc_14_itm) + SIGNED(MAC_acc_18),
+      30));
+  MAC_13_acc_1_nl <= STD_LOGIC_VECTOR(CONV_SIGNED(CONV_SIGNED(SIGNED(MAC_acc_16_nl),
+      30) + SIGNED(MAC_acc_11_itm), 30));
+  acc_or_nl <= (fsm_output(7)) OR (fsm_output(14));
+  acc_mux1h_nl <= MUX1HOT_v_30_4_2(STD_LOGIC_VECTOR(CONV_UNSIGNED(UNSIGNED(MAC_acc_19_nl),
+      30)), acc_32_3_7_sva_1, z_out_4, STD_LOGIC_VECTOR(CONV_SIGNED(SIGNED(MAC_13_acc_1_nl),
+      30)), STD_LOGIC_VECTOR'( acc_or_nl & (fsm_output(8)) & (fsm_output(12)) & (fsm_output(15))));
+  MAC_not_4_nl <= NOT (fsm_output(0));
+  MAC_and_3_nl <= CONV_SL_1_1(z_out_2=STD_LOGIC_VECTOR'("00001")) AND (fsm_output(1));
+  MAC_and_4_nl <= CONV_SL_1_1(z_out_2=STD_LOGIC_VECTOR'("01110")) AND (fsm_output(1));
+  MAC_and_5_nl <= CONV_SL_1_1(z_out_2=STD_LOGIC_VECTOR'("11011")) AND (fsm_output(1));
+  MAC_and_nl <= CONV_SL_1_1(MAC_2_acc_2_psp_sva_mx0w0=STD_LOGIC_VECTOR'("00010"))
+      AND (fsm_output(1));
+  MAC_and_1_nl <= CONV_SL_1_1(MAC_2_acc_2_psp_sva_mx0w0=STD_LOGIC_VECTOR'("01111"))
+      AND (fsm_output(1));
+  MAC_and_2_nl <= CONV_SL_1_1(MAC_2_acc_2_psp_sva_mx0w0=STD_LOGIC_VECTOR'("11100"))
+      AND (fsm_output(1));
+  MAC_and_22_nl <= (NOT((MAC_11_acc_2_psp_sva_1(4)) OR (MAC_11_acc_2_psp_sva_1(0))))
+      AND (fsm_output(3));
+  MAC_and_23_nl <= (MAC_11_acc_2_psp_sva_1(0)) AND (NOT (MAC_11_acc_2_psp_sva_1(4)))
+      AND (fsm_output(3));
+  MAC_and_24_nl <= (MAC_11_acc_2_psp_sva_1(4)) AND (NOT (MAC_11_acc_2_psp_sva_1(0)))
+      AND (fsm_output(3));
+  MAC_and_25_nl <= (MAC_11_acc_2_psp_sva_1(4)) AND (MAC_11_acc_2_psp_sva_1(0)) AND
+      (fsm_output(3));
+  MAC_MAC_nor_2_nl <= NOT((MAC_6_acc_2_tmp(0)) OR or_227_tmp);
+  MAC_and_13_nl <= (MAC_acc_psp_sva_rsp_0(0)) AND (MAC_acc_3_psp_sva(0)) AND (NOT((MAC_acc_psp_sva_rsp_0(1))
+      OR (MAC_acc_3_psp_sva(1)))) AND (NOT and_510_tmp);
+  MAC_and_14_nl <= (MAC_acc_psp_sva_rsp_0(0)) AND (MAC_acc_3_psp_sva(1)) AND (NOT((MAC_acc_psp_sva_rsp_0(1))
+      OR (MAC_acc_3_psp_sva(0)))) AND (NOT and_510_tmp);
+  MAC_and_15_nl <= (MAC_acc_psp_sva_rsp_0(1)) AND (MAC_acc_3_psp_sva(0)) AND (NOT((MAC_acc_psp_sva_rsp_0(0))
+      OR (MAC_acc_3_psp_sva(1)))) AND (NOT and_510_tmp);
+  MAC_and_16_nl <= (MAC_acc_psp_sva_rsp_0(1)) AND (MAC_acc_3_psp_sva(1)) AND (NOT((MAC_acc_psp_sva_rsp_0(0))
+      OR (MAC_acc_3_psp_sva(0)))) AND (NOT and_510_tmp);
+  MAC_and_7_nl <= (MAC_acc_4_psp_sva_1(2)) AND (NOT((MAC_11_acc_2_psp_sva_1(4)) OR
+      (MAC_acc_4_psp_sva_1(0)))) AND (NOT or_tmp_196);
+  MAC_and_8_nl <= (MAC_acc_4_psp_sva_1(2)) AND (MAC_acc_4_psp_sva_1(0)) AND (NOT
+      (MAC_11_acc_2_psp_sva_1(4))) AND (NOT or_tmp_196);
+  MAC_and_9_nl <= (MAC_11_acc_2_psp_sva_1(4)) AND (NOT((MAC_acc_4_psp_sva_1(2)) OR
+      (MAC_acc_4_psp_sva_1(0)))) AND (NOT or_tmp_196);
+  MAC_and_10_nl <= (MAC_11_acc_2_psp_sva_1(4)) AND (MAC_acc_4_psp_sva_1(0)) AND (NOT
+      (MAC_acc_4_psp_sva_1(2))) AND (NOT or_tmp_196);
+  MAC_and_11_nl <= (MAC_11_acc_2_psp_sva_1(4)) AND (MAC_acc_4_psp_sva_1(2)) AND (NOT
+      (MAC_acc_4_psp_sva_1(0))) AND (NOT or_tmp_196);
+  MAC_and_12_nl <= (MAC_11_acc_2_psp_sva_1(4)) AND (MAC_acc_4_psp_sva_1(2)) AND (MAC_acc_4_psp_sva_1(0))
+      AND (NOT or_tmp_196);
+  MAC_9_mul_nl <= STD_LOGIC_VECTOR(CONV_UNSIGNED(SIGNED'( SIGNED(MAC_9_MAC_mux_itm)
+      * SIGNED(coeffs_rsci_q_d)), 30));
+  MAC_mux_43_nl <= MUX_v_5_2_2(MAC_3_acc_2_psp_sva_mx0w0, ((MAC_6_acc_2_tmp(4)) &
+      (MAC_acc_psp_sva_1(3 DOWNTO 2)) & MAC_acc_3_psp_sva_1), fsm_output(2));
+  z_out_1 <= STD_LOGIC_VECTOR(CONV_UNSIGNED(UNSIGNED(MAC_mux_43_nl) + UNSIGNED'(
+      "00001"), 5));
+  MAC_mux_44_nl <= MUX_v_5_2_2(STD_LOGIC_VECTOR'( MAC_i_4_sva & MAC_i_3_sva & MAC_i_2_sva
+      & MAC_acc_5_itm_1 & MAC_acc_5_itm_0), MAC_4_acc_2_psp_sva, fsm_output(2));
+  z_out_2 <= STD_LOGIC_VECTOR(CONV_UNSIGNED(UNSIGNED(MAC_mux_44_nl) + UNSIGNED'(
+      "00001"), 5));
+  or_274_nl <= (fsm_output(12)) OR (fsm_output(5)) OR (fsm_output(7)) OR (fsm_output(14));
+  MAC_mux_45_nl <= MUX_v_30_2_2(MAC_acc_11_itm, MAC_10_mul_itm, or_274_nl);
+  z_out_4 <= STD_LOGIC_VECTOR(CONV_UNSIGNED(UNSIGNED(MAC_mux_45_nl) + UNSIGNED(MAC_11_mul_itm),
+      30));
+  MAC_mux_46_nl <= MUX_v_16_2_2(MAC_8_MAC_mux_itm, MAC_11_MAC_mux_itm, MAC_11_mul_itm_mx0c0);
+  z_out_6 <= STD_LOGIC_VECTOR(CONV_UNSIGNED(SIGNED'( SIGNED(MAC_mux_46_nl) * SIGNED(coeffs_rsci_q_d)),
+      30));
+  MAC_mux_47_nl <= MUX_v_16_2_2(MAC_mux_5_itm, MAC_12_MAC_mux_itm, MAC_or_9_cse);
+  z_out_7 <= STD_LOGIC_VECTOR(CONV_UNSIGNED(SIGNED'( SIGNED(MAC_mux_47_nl) * SIGNED(coeffs_rsci_q_d)),
+      30));
+  MAC_mux_48_nl <= MUX_v_16_2_2(MAC_mux_3_itm, MAC_mux_6_itm, fsm_output(13));
+  z_out_8 <= STD_LOGIC_VECTOR(CONV_UNSIGNED(SIGNED'( SIGNED(MAC_mux_48_nl) * SIGNED(coeffs_rsci_q_d)),
+      30));
+  MAC_mux_49_nl <= MUX_v_16_2_2(MAC_7_MAC_mux_itm, MAC_mux_4_itm, fsm_output(6));
+  z_out_9 <= STD_LOGIC_VECTOR(CONV_UNSIGNED(SIGNED'( SIGNED(MAC_mux_49_nl) * SIGNED(coeffs_rsci_q_d)),
+      30));
+  MAC_mux_50_nl <= MUX_v_16_2_2(MAC_13_MAC_mux_itm, MAC_mux_itm, fsm_output(4));
+  z_out_10 <= STD_LOGIC_VECTOR(CONV_UNSIGNED(SIGNED'( SIGNED(MAC_mux_50_nl) * SIGNED(coeffs_rsci_q_d)),
+      30));
+  MAC_mux_51_nl <= MUX_v_5_2_2(MAC_3_acc_2_psp_sva_mx0w0, MAC_4_acc_2_psp_sva, fsm_output(2));
+  z_out <= MUX_v_16_31_2x0x1x2x5x6x7x8x9x10x11x12x13x14x15x18x19x20x21x22x23x24x25x26x27x28(regs_2_sva,
+      regs_3_sva, regs_15_sva, regs_16_sva, regs_28_sva, regs_29_sva, MAC_mux_51_nl);
+  MAC_conc_125_tmp_2_1 <= MUX_v_2_2_2((MAC_10_acc_2_psp_sva(3 DOWNTO 2)), (MAC_acc_psp_sva_1(3
+      DOWNTO 2)), fsm_output(2));
+  MAC_conc_125_tmp_0 <= MUX_s_1_2_2((MAC_10_acc_2_psp_sva(0)), (MAC_acc_psp_sva_1(0)),
+      fsm_output(2));
+  MAC_and_m1c <= (MAC_conc_125_tmp_2_1(0)) AND (NOT((MAC_conc_125_tmp_2_1(1)) OR
+      MAC_conc_125_tmp_0));
+  MAC_and_m1c_1 <= (MAC_conc_125_tmp_2_1(0)) AND MAC_conc_125_tmp_0 AND (NOT (MAC_conc_125_tmp_2_1(1)));
+  MAC_and_m1c_2 <= (MAC_conc_125_tmp_2_1(1)) AND (NOT((MAC_conc_125_tmp_2_1(0)) OR
+      MAC_conc_125_tmp_0));
+  MAC_and_m1c_3 <= (MAC_conc_125_tmp_2_1(1)) AND MAC_conc_125_tmp_0 AND (NOT (MAC_conc_125_tmp_2_1(0)));
+  MAC_and_27_nl <= (NOT (fsm_output(2))) AND MAC_and_m1c;
+  MAC_and_28_nl <= (fsm_output(2)) AND MAC_and_m1c;
+  MAC_and_29_nl <= (NOT (fsm_output(2))) AND MAC_and_m1c_1;
+  MAC_and_30_nl <= (fsm_output(2)) AND MAC_and_m1c_1;
+  MAC_and_31_nl <= (NOT (fsm_output(2))) AND MAC_and_m1c_2;
+  MAC_and_32_nl <= (fsm_output(2)) AND MAC_and_m1c_2;
+  MAC_and_33_nl <= (NOT (fsm_output(2))) AND MAC_and_m1c_3;
+  MAC_and_34_nl <= (fsm_output(2)) AND MAC_and_m1c_3;
+  z_out_5 <= MUX1HOT_v_16_8_2(regs_21_sva, regs_19_sva, regs_22_sva, regs_20_sva,
+      regs_9_sva, regs_7_sva, regs_10_sva, regs_8_sva, STD_LOGIC_VECTOR'( MAC_and_27_nl
+      & MAC_and_28_nl & MAC_and_29_nl & MAC_and_30_nl & MAC_and_31_nl & MAC_and_32_nl
+      & MAC_and_33_nl & MAC_and_34_nl));
+END v13;
+
+-- ------------------------------------------------------------------
+--  Design Unit:    fir
+-- ------------------------------------------------------------------
+
+LIBRARY IEEE;
+
+USE IEEE.STD_LOGIC_1164.ALL;
+USE IEEE.STD_LOGIC_ARITH.ALL;
+
+USE work.ccs_in_pkg_v1.ALL;
+USE work.ccs_out_pkg_v1.ALL;
+USE work.mgc_io_sync_pkg_v2.ALL;
+
+
+ENTITY fir IS
+  PORT(
+    clk : IN STD_LOGIC;
+    rst : IN STD_LOGIC;
+    coeffs_rsc_radr : OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
+    coeffs_rsc_q : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+    coeffs_rsc_triosy_lz : OUT STD_LOGIC;
+    in1_rsc_dat : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+    in1_rsc_triosy_lz : OUT STD_LOGIC;
+    out1_rsc_dat : OUT STD_LOGIC_VECTOR (15 DOWNTO 0);
+    out1_rsc_triosy_lz : OUT STD_LOGIC
+  );
+END fir;
+
+ARCHITECTURE v13 OF fir IS
+  -- Default Constants
+
+  -- Interconnect Declarations
+  SIGNAL coeffs_rsci_radr_d : STD_LOGIC_VECTOR (4 DOWNTO 0);
+  SIGNAL coeffs_rsci_q_d : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL coeffs_rsci_rport_r_ram_ir_internal_RMASK_B_d : STD_LOGIC;
+
+  COMPONENT fir_Altera_DIST_DIST_1R1W_RBW_rport_1_16_5_32_32_16_gen
+    PORT(
+      q : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+      radr : OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
+      radr_d : IN STD_LOGIC_VECTOR (4 DOWNTO 0);
+      q_d : OUT STD_LOGIC_VECTOR (15 DOWNTO 0);
+      rport_r_ram_ir_internal_RMASK_B_d : IN STD_LOGIC
+    );
+  END COMPONENT;
+  SIGNAL coeffs_rsci_q : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL coeffs_rsci_radr : STD_LOGIC_VECTOR (4 DOWNTO 0);
+  SIGNAL coeffs_rsci_radr_d_1 : STD_LOGIC_VECTOR (4 DOWNTO 0);
+  SIGNAL coeffs_rsci_q_d_1 : STD_LOGIC_VECTOR (15 DOWNTO 0);
+
+  COMPONENT fir_core
+    PORT(
+      clk : IN STD_LOGIC;
+      rst : IN STD_LOGIC;
+      coeffs_rsc_triosy_lz : OUT STD_LOGIC;
+      in1_rsc_dat : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+      in1_rsc_triosy_lz : OUT STD_LOGIC;
+      out1_rsc_dat : OUT STD_LOGIC_VECTOR (15 DOWNTO 0);
+      out1_rsc_triosy_lz : OUT STD_LOGIC;
+      coeffs_rsci_radr_d : OUT STD_LOGIC_VECTOR (4 DOWNTO 0);
+      coeffs_rsci_q_d : IN STD_LOGIC_VECTOR (15 DOWNTO 0);
+      coeffs_rsci_rport_r_ram_ir_internal_RMASK_B_d : OUT STD_LOGIC
+    );
+  END COMPONENT;
+  SIGNAL fir_core_inst_in1_rsc_dat : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL fir_core_inst_out1_rsc_dat : STD_LOGIC_VECTOR (15 DOWNTO 0);
+  SIGNAL fir_core_inst_coeffs_rsci_radr_d : STD_LOGIC_VECTOR (4 DOWNTO 0);
+  SIGNAL fir_core_inst_coeffs_rsci_q_d : STD_LOGIC_VECTOR (15 DOWNTO 0);
+
+BEGIN
+  coeffs_rsci : fir_Altera_DIST_DIST_1R1W_RBW_rport_1_16_5_32_32_16_gen
+    PORT MAP(
+      q => coeffs_rsci_q,
+      radr => coeffs_rsci_radr,
+      radr_d => coeffs_rsci_radr_d_1,
+      q_d => coeffs_rsci_q_d_1,
+      rport_r_ram_ir_internal_RMASK_B_d => coeffs_rsci_rport_r_ram_ir_internal_RMASK_B_d
+    );
+  coeffs_rsci_q <= coeffs_rsc_q;
+  coeffs_rsc_radr <= coeffs_rsci_radr;
+  coeffs_rsci_radr_d_1 <= coeffs_rsci_radr_d;
+  coeffs_rsci_q_d <= coeffs_rsci_q_d_1;
+
+  fir_core_inst : fir_core
+    PORT MAP(
+      clk => clk,
+      rst => rst,
+      coeffs_rsc_triosy_lz => coeffs_rsc_triosy_lz,
+      in1_rsc_dat => fir_core_inst_in1_rsc_dat,
+      in1_rsc_triosy_lz => in1_rsc_triosy_lz,
+      out1_rsc_dat => fir_core_inst_out1_rsc_dat,
+      out1_rsc_triosy_lz => out1_rsc_triosy_lz,
+      coeffs_rsci_radr_d => fir_core_inst_coeffs_rsci_radr_d,
+      coeffs_rsci_q_d => fir_core_inst_coeffs_rsci_q_d,
+      coeffs_rsci_rport_r_ram_ir_internal_RMASK_B_d => coeffs_rsci_rport_r_ram_ir_internal_RMASK_B_d
+    );
+  fir_core_inst_in1_rsc_dat <= in1_rsc_dat;
+  out1_rsc_dat <= fir_core_inst_out1_rsc_dat;
+  coeffs_rsci_radr_d <= fir_core_inst_coeffs_rsci_radr_d;
+  fir_core_inst_coeffs_rsci_q_d <= coeffs_rsci_q_d;
+
+END v13;
+
+
+

@@ -1,0 +1,12 @@
+directive set /fir/fir:core/core/MAC-9:mul.itm REGISTER_NAME MAC-9:mul.itm
+directive set /fir/fir:core/core/MAC:acc#11.itm.1 REGISTER_NAME MAC-9:mul.itm
+directive set /fir/fir:core/core/MAC-10:mul.itm REGISTER_NAME MAC-10:mul.itm
+directive set /fir/fir:core/core/MAC:acc#10.itm.1 REGISTER_NAME MAC-10:mul.itm
+directive set /fir/fir:core/core/MAC-11:mul.itm REGISTER_NAME MAC-11:mul.itm
+directive set /fir/fir:core/core/MAC:acc#9.itm.1 REGISTER_NAME MAC-11:mul.itm
+directive set /fir/fir:core/core/MAC-12:mul.itm REGISTER_NAME MAC-12:mul.itm
+directive set /fir/fir:core/core/MAC:acc#8.itm.1 REGISTER_NAME MAC-12:mul.itm
+directive set /fir/fir:core/core/MAC-14:mul.itm REGISTER_NAME MAC-14:mul.itm
+directive set /fir/fir:core/core/MAC:acc.itm.1 REGISTER_NAME MAC-14:mul.itm
+directive set /fir/fir:core/core/MAC-1:acc#3.itm REGISTER_NAME MAC-1:acc#3.itm
+directive set /fir/fir:core/core/MAC:asn.itm REGISTER_NAME MAC-1:acc#3.itm

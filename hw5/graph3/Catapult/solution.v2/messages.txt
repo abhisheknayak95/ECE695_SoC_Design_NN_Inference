@@ -1,0 +1,39 @@
+
+# Messages from "go new"
+
+
+# Messages from "go analyze"
+
+/INPUTFILES/3
+# Info: Branching solution 'solution.v2' at state 'new' (PRJ-2)
+Edison Design Group C++/C Front End - Version 5.0 (CIN-1)
+Front End called with arguments: -- /home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir.cpp /home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir_inc.h (CIN-69)
+# Warning: parsing restarts here after previous syntax error (CRD-12)
+# Error: expected a statement (CRD-127)
+# Error: Compilation aborted (CIN-5)
+# Info: Starting transformation 'analyze' on solution 'solution.v2' (SOL-8)
+# Warning:           detected during compilation of secondary translation unit "/home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir.cpp" (CRD-12)
+Front End called with arguments: -- /home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir_inc.h /home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+# Error: expected a statement (CRD-127)
+Edison Design Group C++/C Front End - Version 5.0 (CIN-1)
+# Warning: parsing restarts here after previous syntax error (CRD-12)
+# Error: go analyze: Failed analyze
+# Error:           detected during compilation of secondary translation unit "/home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir.cpp" (CRD-127)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 2.42 seconds, memory usage 1313512kB, peak memory usage 1379048kB (SOL-9)
+# Error: Compilation aborted (CIN-5)
+# Error: expected a statement (CRD-127)
+# Warning:           detected during compilation of secondary translation unit "/home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir.cpp" (CRD-12)
+# Error:           detected during compilation of secondary translation unit "/home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir.cpp" (CRD-20)
+/INPUTFILES/1
+# Warning: parsing restarts here after previous syntax error (CRD-12)
+# Error: identifier "rtpr" is undefined (CRD-20)
+# Info: Completed transformation 'new' on solution 'solution.v1': elapsed time 2.52 seconds, memory usage 1313512kB, peak memory usage 1313512kB (SOL-9)
+/INPUTFILES/2
+# Error: Compilation aborted (CIN-5)
+Edison Design Group C++/C Front End - Version 5.0 (CIN-1)
+Front End called with arguments: -- /home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir_inc.h /home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir.cpp (CIN-69)
+# Info: Starting transformation 'analyze' on solution 'solution.v1' (SOL-8)
+Moving session transcript to file "/home/ecegridfs/a/695r48/ece695r/hw5/graph4/catapult.log"
+# Error: go analyze: Failed analyze
+# Error:           detected during compilation of secondary translation unit "/home/ecegridfs/a/695r48/ece695r/hw5/graph4/fir.cpp" (CRD-127)

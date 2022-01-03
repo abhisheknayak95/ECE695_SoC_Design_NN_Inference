@@ -1,0 +1,30 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ecegridfs/a/695r48/ece695r/hw3/hw3_HW/software/crc_hw/obj/default/runtime/sim/mentor
+vnios_system
+VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 :NPCfLn?W9X`W`CW?L^EV3
+Idk9zF`Le9FM2G9]FEN`Vi3
+R0
+w1632958298
+8/home/ecegridfs/a/695r48/ece695r/hw3/hw3_HW/nios_system/testbench/nios_system_tb/simulation/submodules/nios_system.v
+F/home/ecegridfs/a/695r48/ece695r/hw3/hw3_HW/nios_system/testbench/nios_system_tb/simulation/submodules/nios_system.v
+L0 6
+OL;L;10.6b;65
+!s108 1632967970.000000
+!s107 /home/ecegridfs/a/695r48/ece695r/hw3/hw3_HW/nios_system/testbench/nios_system_tb/simulation/submodules/nios_system.v|
+!s90 -reportprogress|300|/home/ecegridfs/a/695r48/ece695r/hw3/hw3_HW/nios_system/testbench/nios_system_tb/simulation/submodules/nios_system.v|-work|nios_system_inst|
+!i113 0
+o-work nios_system_inst -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tCvgOpt 0

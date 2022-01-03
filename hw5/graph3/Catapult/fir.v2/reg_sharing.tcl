@@ -1,0 +1,9 @@
+directive set /fir/fir:core/core/regs:acc.itm REGISTER_NAME regs:acc.itm
+directive set /fir/fir:core/core/regs:vinit.ndx(4:0).sva REGISTER_NAME regs:acc.itm
+directive set /fir/fir:core/core/rptr(4:0).sva REGISTER_NAME regs:acc.itm
+directive set /fir/fir:core/core/MAC:mux#2.itm REGISTER_NAME MAC:mux#2.itm
+directive set /fir/fir:core/core/MAC:slc(regs:rsci.qa_d)(31-16).itm REGISTER_NAME MAC:mux#2.itm
+directive set /fir/fir:core/core/MAC:MAC:or#1.itm REGISTER_NAME MAC:MAC:or#1.itm
+directive set /fir/fir:core/core/wptr(4:0)#1.sva REGISTER_NAME MAC:MAC:or#1.itm
+directive set /fir/fir:core/core/MAC-2:mul.itm REGISTER_NAME MAC-2:mul.itm
+directive set /fir/fir:core/core/MAC:acc.itm REGISTER_NAME MAC-2:mul.itm

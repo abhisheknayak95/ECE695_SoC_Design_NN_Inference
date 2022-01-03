@@ -1,0 +1,92 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ecegridfs/a/695r48/ece695r/hw3/hw3_HW/software/crc_hw/obj/default/runtime/sim/mentor
+vnios_system_new_sdram_controller_0
+Z1 VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 2`oJZ]Ih5[SXO]V=iW2>]3
+I^RDfVKfYMmdMa3kUQ032S2
+R0
+Z2 w1632958298
+Z3 8/home/ecegridfs/a/695r48/ece695r/hw3/hw3_HW/nios_system/testbench/nios_system_tb/simulation/submodules/nios_system_new_sdram_controller_0.v
+Z4 F/home/ecegridfs/a/695r48/ece695r/hw3/hw3_HW/nios_system/testbench/nios_system_tb/simulation/submodules/nios_system_new_sdram_controller_0.v
+L0 159
+Z5 OL;L;10.6b;65
+Z6 !s108 1632967969.000000
+Z7 !s107 /home/ecegridfs/a/695r48/ece695r/hw3/hw3_HW/nios_system/testbench/nios_system_tb/simulation/submodules/nios_system_new_sdram_controller_0.v|
+Z8 !s90 -reportprogress|300|/home/ecegridfs/a/695r48/ece695r/hw3/hw3_HW/nios_system/testbench/nios_system_tb/simulation/submodules/nios_system_new_sdram_controller_0.v|-work|new_sdram_controller_0|
+!i113 0
+Z9 o-work new_sdram_controller_0 -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 tCvgOpt 0
+vnios_system_new_sdram_controller_0_input_efifo_module
+R1
+r1
+!s85 0
+31
+!i10b 1
+!s100 D_oTAa2cL:fOgl`56=U110
+Id4L8Il2Lkc84Q[4X5[i2k3
+R0
+R2
+R3
+R4
+Z11 L0 21
+R5
+R6
+R7
+R8
+!i113 0
+R9
+R10
+vnios_system_new_sdram_controller_0_test_component
+Z12 !s110 1632967969
+!i10b 1
+!s100 =9>mB?YLVD0]GH:Sl97@A2
+IaY7`8FC:@hY03KJPPPg@_1
+R1
+R0
+R2
+Z13 8/home/ecegridfs/a/695r48/ece695r/hw3/hw3_HW/nios_system/testbench/nios_system_tb/simulation/submodules/nios_system_new_sdram_controller_0_test_component.v
+Z14 F/home/ecegridfs/a/695r48/ece695r/hw3/hw3_HW/nios_system/testbench/nios_system_tb/simulation/submodules/nios_system_new_sdram_controller_0_test_component.v
+L0 114
+R5
+r1
+!s85 0
+31
+R6
+Z15 !s107 /home/ecegridfs/a/695r48/ece695r/hw3/hw3_HW/nios_system/testbench/nios_system_tb/simulation/submodules/nios_system_new_sdram_controller_0_test_component.v|
+Z16 !s90 -reportprogress|300|/home/ecegridfs/a/695r48/ece695r/hw3/hw3_HW/nios_system/testbench/nios_system_tb/simulation/submodules/nios_system_new_sdram_controller_0_test_component.v|-work|new_sdram_controller_0|
+!i113 0
+R9
+R10
+vnios_system_new_sdram_controller_0_test_component_ram_module
+R12
+!i10b 1
+!s100 z_Dkb^GznF8g3:Hn;8S1b0
+IgMZoZjJgo8`H2eENR5P6k2
+R1
+R0
+R2
+R13
+R14
+R11
+R5
+r1
+!s85 0
+31
+R6
+R15
+R16
+!i113 0
+R9
+R10

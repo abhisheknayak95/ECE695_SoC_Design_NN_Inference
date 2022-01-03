@@ -1,0 +1,33 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/software/crc_custom_instruction_multicycle/obj/default/runtime/sim/mentor
+valtera_merlin_master_agent
+DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+VDg1SIo80bB@j0V0VzS_@n1
+r1
+!s85 0
+31
+!i10b 1
+!s100 _CJm:YX=>U2LQKH;8=@cb0
+I;BTLB[bzh9OJeY>Ek0CE>1
+!s105 altera_merlin_master_agent_sv_unit
+S1
+R0
+w1634246037
+8/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/testbench/nios_system_tb/simulation/submodules/altera_merlin_master_agent.sv
+F/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/testbench/nios_system_tb/simulation/submodules/altera_merlin_master_agent.sv
+L0 28
+OL;L;10.6b;65
+!s108 1634253944.000000
+!s107 /home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/testbench/nios_system_tb/simulation/submodules/altera_merlin_master_agent.sv|
+!s90 -reportprogress|300|-sv|/home/ecegridfs/a/695r48/ece695r/hw4/hw4_CI_multicycle/nios_system/testbench/nios_system_tb/simulation/submodules/altera_merlin_master_agent.sv|-L|altera_common_sv_packages|-work|nios2_qsys_0_data_master_agent|
+!i113 0
+o-sv -L altera_common_sv_packages -work nios2_qsys_0_data_master_agent -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tCvgOpt 0
